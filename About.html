@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Family Beginnings</title>
+    <meta name="description" content="Learn about Family Beginnings' mission, values, and team dedicated to protecting pregnancy rights and supporting new parents in New York workplaces.">
+    
+    <style>
+        /* ===== BASIC RESET AND TYPOGRAPHY ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fdfefe;
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8f4f8;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #a8d8ea;
+        }
+
+        /* ===== MAIN CONTENT STYLES ===== */
+        main {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(rgba(52, 73, 94, 0.8), rgba(52, 73, 94, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23a8d8ea" width="1200" height="400"/><path fill="%23e8f4f8" d="M0 200c200-25 400-50 600 0s400 25 600 0v200H0z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #e74c3c;
+            margin: 1rem auto;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* ===== CONTENT LAYOUTS ===== */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .content-block {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border: 2px solid #a8d8ea;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .quote-box {
+            background: #fef8f8;
+            border-left: 5px solid #e74c3c;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* ===== TEAM SECTION ===== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #a8d8ea, #e8f4f8);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2c3e50;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== VALUES SECTION ===== */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #e74c3c;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== STATS SECTION ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e74c3c;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            margin: 0 1rem 1rem 0;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: #2c3e50;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== TIMELINE STYLES ===== */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #e74c3c;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #e74c3c;
+            border: 4px solid #fff;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Family Beginnings</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#employers">For Employers</a></li>
+                <li><a href="index.html#medical">For Medical Providers</a></li>
+                <li><a href="index.html#resources">Resources</a></li>
+                <li><a href="index.html#store">Store</a></li>
+                <li><a href="index.html#donate">Donate</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About Family Beginnings</h1>
+                <p>Dedicated to protecting the rights of expecting and new parents in New York workplaces since our founding.</p>
+            </div>
+        </section>
+
+        <!-- MISSION SECTION -->
+        <section>
+            <div class="container">
+                <h2>Our Mission</h2>
+                <div class="quote-box">
+                    "To ensure that no one has to choose between starting a family and maintaining their career. Every expecting and new parent deserves workplace equality, legal protection, and the support they need during this transformative time in their lives."
+                </div>
+                
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>🎯 Our Purpose</h3>
+                        <p>Family Beginnings exists to bridge the gap between pregnancy rights and workplace reality. Too many expecting parents face discrimination, inadequate accommodations, and legal challenges that threaten their economic security during one of life's most important transitions.</p>
+                        <p>As a nonprofit law firm, we provide accessible legal representation and advocacy to ensure that pregnancy and parenthood are protected, not penalized, in New York workplaces.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>⚖️ Our Approach</h3>
+                        <p>We combine legal expertise with compassionate advocacy, understanding that behind every case is a family deserving protection and respect. Our holistic approach includes direct legal representation, community education, and systemic advocacy for policy change.</p>
+                        <p>We work not just to win individual cases, but to create lasting change that benefits all expecting and new parents in our community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORY SECTION -->
+        <section class="section-alt">
+            <div class="container">
+                <h2>Our History</h2>
+                <div class="highlight-box">
+                    <p>Family Beginnings was founded in 2019 by a group of employment law attorneys who recognized a critical gap in legal services for pregnant employees and new parents. After witnessing too many cases where talented employees were forced to choose between their careers and their families, we decided to create an organization dedicated exclusively to pregnancy rights advocacy.</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2019</div>
+                            <h4>Foundation</h4>
+                            <p>Family Beginnings incorporated as a 501(c)(3) nonprofit organization with a mission to protect pregnancy rights in New York workplaces.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h4>First Cases</h4>
+                            <p>Successfully represented our first 25 clients, securing accommodations and legal remedies for pregnancy discrimination cases.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h4>Community Outreach</h4>
+                            <p>Launched our educational presentation program, reaching over 500 employees and HR professionals in our first year.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022</div>
+                            <h4>Expansion</h4>
+                            <p>Added employer consulting services and medical provider resources to our comprehensive service offerings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h4>Policy Advocacy</h4>
+                            <p>Began advocating for stronger pregnancy protection laws at the state level, working with legislators and advocacy groups.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h4>Digital Resources</h4>
+                            <p>Launched our comprehensive online resource library and expanded our virtual service offerings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section>
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">⚖️</div>
+                        <div class="member-name">Sarah Martinez, Esq.</div>
+                        <div class="member-title">Founding Director & Lead Attorney</div>
+                        <p>Sarah brings 15 years of employment law experience, specializing in pregnancy discrimination and workplace accommodations. She is admitted to practice in New York State and federal courts.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">👩‍💼</div>
+                        <div class="member-name">Dr. Elena Rodriguez</div>
+                        <div class="member-title">Legal Advocate & Community Outreach</div>
+                        <p>Dr. Rodriguez holds a JD and PhD in Public Policy. She leads our educational programs and community partnerships, focusing on systemic change and policy advocacy.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">📚</div>
+                        <div class="member-name">Michael Chen, Esq.</div>
+                        <div class="member-title">Staff Attorney</div>
+                        <p>Michael specializes in federal employment law and disability rights. He handles complex accommodation cases and provides legal research support for our most challenging cases.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">🤝</div>
+                        <div class="member-name">Jennifer Thompson</div>
+                        <div class="member-title">Client Services Coordinator</div>
+                        <p>Jennifer ensures our clients receive compassionate support throughout their legal journey. She coordinates intake, case management, and connects clients with additional resources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUES SECTION -->
+        <section class="section-alt">
+            <div class="container">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">⚖️</div>
+                        <h4>Justice</h4>
+                        <p>We believe in equal treatment and fair opportunities for all parents in the workplace, regardless of their economic status or employer size.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Compassion</h4>
+                        <p>We understand the emotional and financial stress that workplace discrimination creates for families during an already challenging time.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Excellence</h4>
+                        <p>We provide the highest quality legal representation and advocacy, ensuring every client receives thorough, professional service.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🌟</div>
+                        <h4>Empowerment</h4>
+                        <p>We educate and empower parents to understand their rights and advocate for themselves and their families.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🔍</div>
+                        <h4>Transparency</h4>
+                        <p>We maintain open, honest communication with our clients about their cases, rights, and all available options.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Growth</h4>
+                        <p>We continuously evolve our services and advocacy to meet the changing needs of New York's working families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT SECTION -->
+        <section>
+            <div class="container">
+                <h2>Our Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">500+</span>
+                        <div class="stat-label">Families Served</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">95%</span>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">$2.3M</span>
+                        <div class="stat-label">Recovered for Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">150+</span>
+                        <div class="stat-label">Educational Presentations</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Real Results for Real Families</h4>
+                    <p>Our work has resulted in policy changes at major employers, secured hundreds of reasonable accommodations, recovered significant compensation for discrimination victims, and educated thousands of workers about their rights. But our greatest impact is measured in the families who can now focus on welcoming their new children without fear of losing their livelihoods.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOGNITION SECTION -->
+        <section class="section-alt">
+            <div class="container">
+                <h2>Recognition & Partnerships</h2>
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>🏆 Awards & Recognition</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong>2024:</strong> New York State Bar Association Pro Bono Award
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong>2023:</strong> National Employment Lawyers Association Excellence in Advocacy
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong>2022:</strong> Working Mother Magazine Legal Advocate of the Year
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>2021:</strong> Better Business Bureau Nonprofit Excellence Award
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>🤝 Strategic Partnerships</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                New York State Department of Labor
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                National Partnership for Women & Families
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                A Better Balance: The Work & Family Legal Center
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                                New York Civil Liberties Union
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                Pregnancy Justice
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 style="color: white; margin-bottom: 2rem;">Ready to Protect Your Rights?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #e8f4f8;">
+                    Whether you're facing workplace discrimination, need accommodation support, or want to learn more about your rights, Family Beginnings is here to help.
+                </p>
+                <a href="index.html#contact" class="cta-button">Get Free Consultation</a>
+                <a href="index.html#donate" class="cta-button secondary">Support Our Mission</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                This website provides general information only and does not constitute legal advice. 
+                An attorney-client relationship is not formed until a retainer agreement is signed.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== SMOOTH SCROLLING FOR NAVIGATION =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== HEADER BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            }
+        });
+
+        // ===== ANIMATE STATS ON SCROLL =====
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = stat.textContent;
+                const isVisible = stat.getBoundingClientRect().top < window.innerHeight;
+                
+                if (isVisible && !stat.classList.contains('animated')) {
+                    stat.classList.add('animated');
+                    
+                    // Simple animation for numbers
+                    const numericValue = parseInt(finalValue.replace(/[^\d]/g, ''));
+                    if (numericValue) {
+                        let current = 0;
+                        const increment = numericValue / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= numericValue) {
+                                stat.textContent = finalValue;
+                                clearInterval(timer);
+                            } else {
+                                stat.textContent = Math.floor(current) + finalValue.replace(/[\d]/g, '').charAt(0);
+                            }
+                        }, 30);
+                    }
+                }
+            });
+        }
+
+        // ===== SCROLL EVENT LISTENER =====
+        window.addEventListener('scroll', animateStats);
+        
+        // ===== INITIAL ANIMATION CHECK =====
+        document.addEventListener('DOMContentLoaded', animateStats);
+    </script>
+</body>
+</html>
