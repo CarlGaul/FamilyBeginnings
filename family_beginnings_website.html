@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Beginnings - Legal Advocacy for New and Expecting Parents</title>
+    <meta name="description" content="Family Beginnings provides legal advice and representation for pregnancy discrimination, workplace accommodations, and parental leave rights in New York.">
+    
+    <style>
+        /* ===== BASIC RESET AND TYPOGRAPHY ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fdfefe;
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8f4f8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #a8d8ea;
+        }
+
+        /* ===== MAIN CONTENT STYLES ===== */
+        main {
+            margin-top: 80px; /* Account for fixed header */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(52, 73, 94, 0.8), rgba(52, 73, 94, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23a8d8ea" width="1200" height="600"/><path fill="%23e8f4f8" d="M0 300c200-50 400-100 600 0s400 50 600 0v300H0z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #e74c3c;
+            margin: 1rem auto;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== SERVICES GRID ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            margin-right: 1rem;
+            color: #e74c3c;
+            min-width: 80px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile - you can add hamburger menu later */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== ADDITIONAL PAGE STYLES ===== */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border: 2px solid #a8d8ea;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .download-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-item:hover {
+            border-color: #e74c3c;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .download-btn {
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .download-btn:hover {
+            background: #219a52;
+        }
+
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #a8d8ea, #e8f4f8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2c3e50;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 1rem 0;
+        }
+
+        .buy-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background: #c0392b;
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .donation-amount {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .donation-amount:hover {
+            border-color: #e74c3c;
+            background: #fef8f8;
+        }
+
+        .donation-amount.selected {
+            border-color: #e74c3c;
+            background: #fef8f8;
+        }
+
+        .amount-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .presentation-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #27ae60;
+        }
+
+        .request-btn {
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .request-btn:hover {
+            background: #219a52;
+        }
+
+        /* ===== SCROLL BEHAVIOR ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <div class="logo">Family Beginnings</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#employers">For Employers</a></li>
+                <li><a href="#medical">For Medical Providers</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Protecting Your Rights as New and Expecting Parents</h1>
+                <p>Family Beginnings is a nonprofit law firm dedicated to ensuring workplace equality and legal protection for pregnant women and new parents in New York.</p>
+                <a href="#contact" class="cta-button">Get Legal Help Today</a>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section-alt">
+            <div class="container">
+                <h2>Our Legal Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Pregnancy Discrimination Defense</h3>
+                        <p>We represent women facing discrimination in the workplace due to pregnancy. If your employer has treated you unfairly because of your pregnancy, we'll fight for your rights and seek appropriate compensation.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Workplace Accommodations</h3>
+                        <p>Pregnant employees are entitled to reasonable accommodations under New York law. We help secure modifications like flexible schedules, seating arrangements, and other necessary adjustments for your health and safety.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🍼</div>
+                        <h3>Parental Leave Rights</h3>
+                        <p>Navigate New York's Paid Family Leave benefits and protect your job during bonding time with your new child. We ensure you receive the time and benefits you're legally entitled to.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🤱</div>
+                        <h3>Prenatal Leave Advocacy</h3>
+                        <p>When pregnancy complications require time off work, we help secure prenatal leave benefits and job protection under New York disability and family leave laws.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">💼</div>
+                        <h3>Employment Law Consultation</h3>
+                        <p>Get expert legal advice on your rights as an expecting or new parent in the workplace. We provide clear guidance on complex employment law matters affecting your family.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Legal Document Review</h3>
+                        <p>Review employment contracts, severance agreements, and workplace policies to ensure your rights are protected throughout pregnancy and parenthood.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="section-alt">
+            <div class="container">
+                <h2>Educational Presentations</h2>
+                <div class="about-content">
+                    <p>Family Beginnings offers comprehensive educational presentations on pregnancy rights in the workplace. Our presentations are designed for employees, HR professionals, and community groups who want to understand their rights and responsibilities.</p>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <div class="presentation-card">
+                            <h3>📊 "Know Your Rights: Pregnancy in the Workplace"</h3>
+                            <p><strong>Duration:</strong> 45-60 minutes</p>
+                            <p><strong>Audience:</strong> Employees, Community Groups</p>
+                            <ul class="feature-list">
+                                <li>Understanding New York pregnancy discrimination laws</li>
+                                <li>Requesting reasonable accommodations</li>
+                                <li>Navigating parental leave benefits</li>
+                                <li>Recognizing illegal workplace practices</li>
+                                <li>When to seek legal help</li>
+                            </ul>
+                            <a href="#contact" class="request-btn">Request Presentation</a>
+                        </div>
+                        
+                        <div class="presentation-card">
+                            <h3>🏢 "Creating Inclusive Workplaces for Expecting Parents"</h3>
+                            <p><strong>Duration:</strong> 60-90 minutes</p>
+                            <p><strong>Audience:</strong> HR Professionals, Management</p>
+                            <ul class="feature-list">
+                                <li>Legal compliance requirements</li>
+                                <li>Best practices for accommodations</li>
+                                <li>Handling pregnancy-related requests</li>
+                                <li>Avoiding discrimination claims</li>
+                                <li>Creating supportive policies</li>
+                            </ul>
+                            <a href="#contact" class="request-btn">Request Presentation</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="info-box">
+                            <h4>Why Choose Our Presentations?</h4>
+                            <ul class="feature-list">
+                                <li>Expert legal knowledge of New York laws</li>
+                                <li>Real-world case studies and examples</li>
+                                <li>Interactive Q&A sessions</li>
+                                <li>Practical takeaway resources</li>
+                                <li>Customizable content for your audience</li>
+                                <li>Available in-person or virtual</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h4>Presentation Formats Available</h4>
+                            <p><strong>In-Person:</strong> Interactive workshops with printed materials</p>
+                            <p><strong>Virtual:</strong> Engaging online presentations with digital resources</p>
+                            <p><strong>Lunch & Learn:</strong> Condensed 30-minute sessions perfect for workplace settings</p>
+                            <p><strong>Community Events:</strong> Tailored presentations for community centers, libraries, and support groups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMPLOYERS SECTION -->
+        <section id="employers">
+            <div class="container">
+                <h2>Services for Employers</h2>
+                <div class="about-content">
+                    <p>Help your organization create a supportive, legally compliant workplace for pregnant employees. Our consulting services ensure your policies protect both your business and your employees' rights.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Policy Development & Review</h3>
+                        <p>We'll review your current policies and help develop comprehensive guidelines that comply with New York State and federal laws while supporting your pregnant employees.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Accommodation Consulting</h3>
+                        <p>Learn how to handle accommodation requests effectively. We provide guidance on reasonable accommodations, the interactive process, and documentation requirements.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📚</div>
+                        <h3>Training Programs</h3>
+                        <p>Comprehensive training for HR professionals and managers on pregnancy discrimination laws, best practices, and how to create an inclusive workplace culture.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Legal Compliance Audits</h3>
+                        <p>Thorough review of your current practices to identify potential compliance issues and provide recommendations for improvement before problems arise.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🤝</div>
+                        <h3>Ongoing Advisory Services</h3>
+                        <p>Retain our services for ongoing guidance on complex situations, policy updates, and best practices as laws and your business evolve.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📞</div>
+                        <h3>Crisis Management</h3>
+                        <p>When situations arise, we provide immediate consultation to help you navigate complex accommodation requests and potential legal challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Why Invest in Compliance?</h4>
+                    <p>Proactive compliance isn't just about avoiding lawsuits—it's about creating a workplace where talented employees want to stay. Companies with strong pregnancy and family-friendly policies see higher employee retention, better recruitment outcomes, and improved company reputation. Our consulting services help you build these advantages while ensuring full legal compliance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEDICAL PROVIDERS SECTION -->
+        <section id="medical" class="section-alt">
+            <div class="container">
+                <h2>Resources for Medical Providers</h2>
+                <div class="about-content">
+                    <p>Healthcare providers play a crucial role in supporting pregnant employees' workplace rights. We provide resources to help you advocate effectively for your patients' accommodation needs.</p>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>🏥 Supporting Your Patients</h3>
+                        <ul class="feature-list">
+                            <li>Understanding workplace accommodation laws</li>
+                            <li>Writing effective medical documentation</li>
+                            <li>Communicating with employers and insurance</li>
+                            <li>Temporary disability vs. accommodation requests</li>
+                            <li>When to recommend legal consultation</li>
+                        </ul>
+                        
+                        <div class="info-box">
+                            <h4>Key Documentation Tips</h4>
+                            <p>Effective medical documentation should be specific about functional limitations, duration of restrictions, and suggested accommodations. Avoid vague language like "light duty" and instead specify exact lifting restrictions, standing limitations, or schedule modifications needed.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>📝 Available Resources</h3>
+                        <div class="download-item">
+                            <h4>Medical Accommodation Letter Template</h4>
+                            <p>Professionally drafted template letters that clearly communicate your patient's needs to employers while protecting medical privacy.</p>
+                            <a href="#" class="download-btn">Download Template</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Functional Capacity Evaluation Forms</h4>
+                            <p>Standardized forms to help document specific physical limitations and work capacity during pregnancy.</p>
+                            <a href="#" class="download-btn">Download Forms</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Quick Reference: NY Pregnancy Laws</h4>
+                            <p>One-page summary of key New York laws affecting pregnant employees, perfect for quick reference during patient consultations.</p>
+                            <a href="#" class="download-btn">Download Guide</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>When to Refer: Legal Red Flags</h4>
+                            <p>Checklist to help identify when your patients may need legal assistance with workplace issues.</p>
+                            <a href="#" class="download-btn">Download Checklist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section id="resources">
+            <div class="container">
+                <h2>Free Resources & Templates</h2>
+                <div class="about-content">
+                    <p>Download our free templates and resources to help you navigate pregnancy rights in the workplace. All materials are developed by our legal team and regularly updated to reflect current New York law.</p>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>📋 For Employees</h3>
+                        <div class="download-item">
+                            <h4>Accommodation Request Letter Template</h4>
+                            <p>Professional template to request workplace accommodations with legal language that protects your rights.</p>
+                            <a href="#" class="download-btn">Download Template</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Pregnancy Rights Checklist</h4>
+                            <p>Comprehensive checklist of your rights under New York law, including timelines and key protections.</p>
+                            <a href="#" class="download-btn">Download Checklist</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Documentation Tracker</h4>
+                            <p>Organize and track all communications with your employer regarding your pregnancy and accommodation requests.</p>
+                            <a href="#" class="download-btn">Download Tracker</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Leave Request Forms</h4>
+                            <p>Templates for requesting prenatal leave, family leave, and disability benefits under New York law.</p>
+                            <a href="#" class="download-btn">Download Forms</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>🏢 For Employers</h3>
+                        <div class="download-item">
+                            <h4>Accommodation Process Flowchart</h4>
+                            <p>Step-by-step visual guide to handling accommodation requests legally and effectively.</p>
+                            <a href="#" class="download-btn">Download Flowchart</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Sample Accommodation Policies</h4>
+                            <p>Template policies that comply with New York law and promote inclusive workplace practices.</p>
+                            <a href="#" class="download-btn">Download Policies</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Manager Training Outline</h4>
+                            <p>Comprehensive training materials for supervisors on pregnancy discrimination and accommodation laws.</p>
+                            <a href="#" class="download-btn">Download Outline</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Legal Compliance Calendar</h4>
+                            <p>Important dates and deadlines for pregnancy-related leave and accommodation requirements.</p>
+                            <a href="#" class="download-btn">Download Calendar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Need Something Specific?</h4>
+                    <p>Can't find what you're looking for? <a href="#contact" style="color: #e74c3c; font-weight: bold;">Contact us</a> to request additional resources or customized templates for your specific situation. We regularly add new materials based on community feedback and legal developments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORE SECTION -->
+        <section id="store" class="section-alt">
+            <div class="container">
+                <h2>Family Beginnings Store</h2>
+                <div class="about-content">
+                    <p>Support our mission while raising awareness about pregnancy rights in the workplace. All proceeds support our nonprofit legal services for expecting and new parents.</p>
+                </div>
+                
+                <div class="store-grid">
+                    <div class="product-card">
+                        <div class="product-image">👕</div>
+                        <div class="product-info">
+                            <h3>"Pregnancy Rights = Worker Rights" T-Shirt</h3>
+                            <p>Comfortable cotton t-shirt with our empowering message. Available in multiple sizes and colors.</p>
+                            <div class="product-price">$25.00</div>
+                            <a href="https://www.etsy.com/shop/YourShopName" target="_blank" class="buy-btn">Buy on Etsy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">☕</div>
+                        <div class="product-info">
+                            <h3>"Accommodations Are Rights" Coffee Mug</h3>
+                            <p>Start your day with a reminder of your workplace rights. Dishwasher and microwave safe.</p>
+                            <div class="product-price">$18.00</div>
+                            <a href="https://www.etsy.com/shop/YourShopName" target="_blank" class="buy-btn">Buy on Etsy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">📚</div>
+                        <div class="product-info">
+                            <h3>"Know Your Rights" Handbook</h3>
+                            <p>Comprehensive guide to pregnancy rights in New York workplaces. Physical copy with bonus digital resources.</p>
+                            <div class="product-price">$15.00</div>
+                            <a href="https://www.etsy.com/shop/YourShopName" target="_blank" class="buy-btn">Buy on Etsy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">🎒</div>
+                        <div class="product-info">
+                            <h3>Family Beginnings Tote Bag</h3>
+                            <p>Durable canvas tote bag perfect for work, appointments, or daily use. Features our logo and mission statement.</p>
+                            <div class="product-price">$20.00</div>
+                            <a href="https://www.etsy.com/shop/YourShopName" target="_blank" class="buy-btn">Buy on Etsy</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Custom Orders & Bulk Pricing</h4>
+                    <p>Need items for your organization or event? We offer custom printing and bulk pricing for orders of 10 or more items. Perfect for HR departments, community organizations, and advocacy groups. <a href="#contact" style="color: #e74c3c; font-weight: bold;">Contact us</a> for pricing and options.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DONATE SECTION -->
+        <section id="donate">
+            <div class="container">
+                <h2>Support Our Mission</h2>
+                <div class="about-content">
+                    <p>Your donation helps us provide free legal services to expecting and new parents who need workplace advocacy. Every contribution directly supports our mission to protect pregnancy rights and promote workplace equality.</p>
+                </div>
+                
+                <div class="donation-options">
+                    <div class="donation-amount" onclick="selectAmount(25)">
+                        <div class="amount-value">$25</div>
+                        <div>Consultation Support</div>
+                    </div>
+                    <div class="donation-amount" onclick="selectAmount(50)">
+                        <div class="amount-value">$50</div>
+                        <div>Document Preparation</div>
+                    </div>
+                    <div class="donation-amount" onclick="selectAmount(100)">
+                        <div class="amount-value">$100</div>
+                        <div>Legal Research</div>
+                    </div>
+                    <div class="donation-amount" onclick="selectAmount(250)">
+                        <div class="amount-value">$250</div>
+                        <div>Court Filing Fees</div>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>💳 Secure Online Giving</h3>
+                        <p>We use trusted, secure payment platforms to process all donations. Choose your preferred method:</p>
+                        
+                        <div style="margin: 2rem 0;">
+                            <a href="https://www.paypal.com/donate/?business=YourPayPalID" target="_blank" class="cta-button" style="margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">Donate via PayPal</a>
+                            <a href="https://www.gofundme.com/f/your-campaign" target="_blank" class="cta-button" style="margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">Donate via GoFundMe</a>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h4>Other Ways to Give</h4>
+                            <p><strong>Check:</strong> Make checks payable to "Family Beginnings" and mail to our office address.</p>
+                            <p><strong>Monthly Giving:</strong> Set up recurring donations through PayPal or contact us for other options.</p>
+                            <p><strong>Corporate Sponsorship:</strong> Contact us about partnership opportunities.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>🎯 Your Impact</h3>
+                        <ul class="feature-list">
+                            <li><strong>$25</strong> - Provides one free consultation session</li>
+                            <li><strong>$50</strong> - Covers document preparation and filing</li>
+                            <li><strong>$100</strong> - Funds legal research for complex cases</li>
+                            <li><strong>$250</strong> - Covers court filing fees and administrative costs</li>
+                            <li><strong>$500</strong> - Sponsors a complete case for one client</li>
+                        </ul>
+                        
+                        <div class="info-box">
+                            <h4>Tax Deductible</h4>
+                            <p>Family Beginnings is a 501(c)(3) nonprofit organization. Your donations are tax-deductible to the full extent allowed by law. Tax ID: [Your EIN Number]</p>
+                            <p>You will receive a donation receipt for your records immediately after your contribution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Family Beginnings</h2>
+                <div class="about-content">
+                    <p>Family Beginnings was founded on the principle that starting a family should never jeopardize your career or financial security. As a nonprofit law firm, we're committed to making legal representation accessible to all expecting and new parents, regardless of their economic circumstances.</p>
+                    
+                    <p>Our expertise in New York employment law, combined with our passion for family rights, enables us to provide comprehensive legal services that protect your workplace rights during this important time in your life.</p>
+                    
+                    <p>We understand the unique challenges that come with balancing work and family, and we're here to ensure that your legal rights are fully protected every step of the way.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-alt">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>info@familybeginnings.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <span>123 Legal Street<br>New York, NY 10001</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Hours:</strong>
+                            <span>Monday - Friday<br>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <p style="margin-top: 2rem; font-style: italic; color: #666;">
+                            <strong>Emergency consultations available.</strong><br>
+                            Initial consultation is always free for nonprofit cases.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Request a Consultation</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="situation">Brief Description of Your Situation *</label>
+                                <textarea id="situation" name="situation" placeholder="Please describe your legal concern..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Request Free Consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                This website provides general information only and does not constitute legal advice. 
+                An attorney-client relationship is not formed until a retainer agreement is signed.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== DONATION AMOUNT SELECTION =====
+        function selectAmount(amount) {
+            // Remove previous selection
+            document.querySelectorAll('.donation-amount').forEach(el => {
+                el.classList.remove('selected');
+            });
+            
+            // Add selection to clicked amount
+            event.target.closest('.donation-amount').classList.add('selected');
+            
+            // You could store this amount for processing
+            console.log('Selected donation amount: 
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const situation = formData.get('situation');
+            
+            // Simple validation
+            if (!name || !email || !situation) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real implementation, you would send this data to your server
+            // For now, we'll show a success message
+            alert('Thank you for your inquiry, ' + name + '. We will contact you within 24 hours to schedule your free consultation.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // ===== SMOOTH SCROLLING FOR NAVIGATION =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== HEADER BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            }
+        });
+    </script>
+</body>
+</html> + amount);
+        }
+
+        // ===== FORM HANDLING =====
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const situation = formData.get('situation');
+            
+            // Simple validation
+            if (!name || !email || !situation) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real implementation, you would send this data to your server
+            // For now, we'll show a success message
+            alert('Thank you for your inquiry, ' + name + '. We will contact you within 24 hours to schedule your free consultation.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // ===== SMOOTH SCROLLING FOR NAVIGATION =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== HEADER BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
