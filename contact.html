@@ -1,1 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Family Beginnings</title>
+    <meta name="description" content="Contact Family Beginnings for free legal consultation on pregnancy discrimination, workplace accommodations, and parental leave rights in New York.">
+    
+    <style>
+        /* ===== BASIC RESET AND TYPOGRAPHY ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fdfefe;
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8f4f8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #a8d8ea;
+        }
+
+        /* ===== MAIN CONTENT STYLES ===== */
+        main {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 4rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .contact-item a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #e74c3c;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .submit-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-box {
+            background: #e74c3c;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-hero p {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <div class="logo">Family Beginnings</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="legal-services.html">Legal Services</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="employers.html">For Employers</a></li>
+                <li><a href="medical-providers.html">For Medical Providers</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get the legal support you need to protect your workplace rights</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- CONTACT INFO -->
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <a href="mailto:info@familybeginnings.org">info@familybeginnings.org</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>123 Legal Plaza<br>Rochester, NY 14604</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">🕒</span>
+                            <span>Monday - Friday<br>9:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT FORM -->
+                    <div class="contact-form">
+                        <h2>Request Consultation</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="issue">Type of Issue</label>
+                                <select id="issue" name="issue">
+                                    <option value="">Select an option</option>
+                                    <option value="pregnancy-discrimination">Pregnancy Discrimination</option>
+                                    <option value="workplace-accommodation">Workplace Accommodation</option>
+                                    <option value="parental-leave">Parental Leave Rights</option>
+                                    <option value="other">Other Legal Issue</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Brief Description of Your Situation *</label>
+                                <textarea id="message" name="message" placeholder="Please provide a brief overview of your situation..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Free Initial Consultation</h2>
+                <p>Don't let workplace discrimination affect your growing family. Contact us today for a confidential consultation about your rights and options.</p>
+                <div class="highlight-box">
+                    All consultations are completely confidential
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                This website provides general information only and does not constitute legal advice. 
+                An attorney-client relationship is not formed until a retainer agreement is signed.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== HEADER BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            }
+        });
+
+        // ===== FORM SUBMISSION =====
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will contact you within 24 hours to schedule your free consultation.');
+        });
+    </script>
+</body>
+</html>
