@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Family Beginnings</title>
+    <meta name="description" content="Support Family Beginnings' mission to provide legal advocacy for new and expecting parents in New York.">
+    
+    <style>
+        /* ===== BASIC RESET AND TYPOGRAPHY ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fdfefe;
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8f4f8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #a8d8ea;
+        }
+
+        /* ===== MAIN CONTENT STYLES ===== */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        /* ===== COMING SOON SECTION ===== */
+        .coming-soon {
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-left: 8px solid #e74c3c;
+        }
+
+        .coming-soon h1 {
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .coming-soon h2 {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-bottom: 2rem;
+            font-weight: normal;
+        }
+
+        .coming-soon p {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .icon {
+            font-size: 5rem;
+            color: #e74c3c;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .support-text {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            border: 2px solid #e8f4f8;
+        }
+
+        .support-text h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .support-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .coming-soon {
+                padding: 3rem 2rem;
+            }
+
+            .coming-soon h1 {
+                font-size: 2.5rem;
+            }
+
+            .coming-soon h2 {
+                font-size: 1.5rem;
+            }
+
+            .coming-soon p {
+                font-size: 1.1rem;
+            }
+
+            .icon {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <div class="logo">Family Beginnings</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="legal-services.html">Legal Services</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="employers.html">For Employers</a></li>
+                <li><a href="medical-providers.html">For Medical Providers</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="coming-soon">
+                <span class="icon">🚀</span>
+                <h1>Donate</h1>
+                <h2>Coming Soon!</h2>
+                <p>We're working hard to launch our donation platform to help support families in need of legal advocacy. Your contributions will help us provide free legal services to more expecting and new parents facing workplace discrimination.</p>
+                
+                <div class="support-text">
+                    <h3>Want to Support Our Mission Now?</h3>
+                    <p>Contact us directly to learn about other ways you can help support our legal advocacy work for families in New York.</p>
+                </div>
+                
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                This website provides general information only and does not constitute legal advice. 
+                An attorney-client relationship is not formed until a retainer agreement is signed.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== HEADER BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
