@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Diagnostic Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-link {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #1976d2;
+        }
+        .test-link:hover {
+            background: #bbdefb;
+        }
+        .working {
+            background: #e8f5e8;
+            border-color: #4caf50;
+            color: #2e7d32;
+        }
+        .not-working {
+            background: #ffebee;
+            border-color: #f44336;
+            color: #c62828;
+        }
+        .instructions {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .file-list {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navigation Diagnostic Test</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>Click each link below. If the page loads, the file exists and is working. If you get a "file not found" or "404" error, there's an issue with that file.</p>
+    </div>
+
+    <h2>Test Each Navigation Link:</h2>
+    
+    <!-- Known working links -->
+    <a href="index.html" class="test-link working">Home (index.html) - Should work</a>
+    <a href="education.html" class="test-link working">Education (education.html) - You said this works</a>
+    <a href="contact.html" class="test-link working">Contact (contact.html) - You said this works</a>
+    
+    <!-- Potentially problematic links -->
+    <a href="about.html" class="test-link">About Us (about.html)</a>
+    <a href="legalservices.html" class="test-link not-working">Legal Services (legalservices.html) - Not working</a>
+    <a href="foremployers.html" class="test-link not-working">For Employers (foremployers.html) - Not working</a>
+    <a href="medicalproviders.html" class="test-link">Medical Providers (medicalproviders.html)</a>
+    <a href="formedicalproviders.html" class="test-link not-working">Medical Providers ALT (formedicalproviders.html) - You mentioned this name</a>
+    <a href="donate.html" class="test-link not-working">Donate (donate.html) - Not working</a>
+
+    <div class="file-list">
+        <h3>Your file names should be EXACTLY:</h3>
+        <ul>
+            <li>index.html</li>
+            <li>about.html</li>
+            <li>legalservices.html (no spaces, no hyphens)</li>
+            <li>education.html</li>
+            <li>foremployers.html (no spaces, no hyphens)</li>
+            <li>medicalproviders.html (no spaces, no hyphens)</li>
+            <li>donate.html</li>
+            <li>contact.html</li>
+        </ul>
+    </div>
+
+    <div class="instructions">
+        <h3>Common Issues to Check:</h3>
+        <ol>
+            <li><strong>File Extensions:</strong> Make sure files end with .html (not .htm)</li>
+            <li><strong>Case Sensitivity:</strong> Some servers are case-sensitive. Use all lowercase.</li>
+            <li><strong>Hidden Extensions:</strong> Windows sometimes hides .html extensions. Your file might actually be "legalservices.html.txt"</li>
+            <li><strong>File Location:</strong> All files must be in the same folder as index.html</li>
+            <li><strong>File Content:</strong> Make sure the files aren't empty or corrupted</li>
+        </ol>
+    </div>
+
+    <div class="instructions">
+        <h3>Quick Fix Test:</h3>
+        <p>Try creating a simple test file called "test.html" with just basic content to see if the issue is with specific files or all new files.</p>
+    </div>
+
+    <h2>Return to Navigation Test:</h2>
+    <a href="index.html" class="test-link">Back to Home Page</a>
+</body>
+</html>
