@@ -160,7 +160,7 @@
 
         .journey-timeline {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
             margin-top: 2rem;
         }
@@ -286,9 +286,15 @@
 
         .protection-highlights {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 3rem;
+        }
+
+        .protection-highlights .highlight-item:last-child {
+            grid-column: 1 / -1;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
         .highlight-item {
@@ -376,8 +382,14 @@
             }
 
             .journey-timeline,
-            .services-grid {
+            .services-grid,
+            .protection-highlights {
                 grid-template-columns: 1fr;
+            }
+
+            .protection-highlights .highlight-item:last-child {
+                grid-column: 1;
+                max-width: none;
             }
 
             .timeline-card,
@@ -445,7 +457,6 @@
                             <li>Time off for fertility consultations</li>
                             <li>IVF and treatment accommodation</li>
                             <li>Insurance coverage advocacy</li>
-                            <li>Medical appointment scheduling</li>
                             <li>Privacy protection during treatment</li>
                         </ul>
                     </div>
