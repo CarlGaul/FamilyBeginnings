@@ -78,30 +78,29 @@
         }
 
         /* ===== PAGE HEADER ===== */
-        /* ===== PAGE HEADER ===== */
-.page-header {
-    background: linear-gradient(rgba(52, 73, 94, 0.8), rgba(52, 73, 94, 0.8)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23a8d8ea" width="1200" height="400"/><path fill="%23e8f4f8" d="M0 200c200-25 400-50 600 0s400 25 600 0v200H0z"/></svg>');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
+        .page-header {
+            background: linear-gradient(rgba(52, 73, 94, 0.8), rgba(52, 73, 94, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23a8d8ea" width="1200" height="400"/><path fill="%23e8f4f8" d="M0 200c200-25 400-50 600 0s400 25 600 0v200H0z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
 
-.page-header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    color: white;
-}
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: white;
+        }
 
-.page-header p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #e8f4f8;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #e8f4f8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         /* ===== SECTION STYLES ===== */
@@ -111,6 +110,12 @@
 
         .section-alt {
             background-color: #f8f9fa;
+        }
+
+        /* Dark background sections */
+        .section-dark {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
         }
 
         h2 {
@@ -128,6 +133,11 @@
             height: 4px;
             background: #e74c3c;
             margin: 1rem auto;
+        }
+
+        /* White text for dark sections */
+        .section-dark h2 {
+            color: white;
         }
 
         h3 {
@@ -165,11 +175,17 @@
         }
 
         .highlight-box {
-            background: #e8f4f8;
-            border: 2px solid #a8d8ea;
+            background: rgba(232, 244, 248, 0.2);
+            border: 2px solid rgba(168, 216, 234, 0.3);
             border-radius: 10px;
             padding: 2rem;
             margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box p {
+            color: white;
+            font-size: 1.2rem;
         }
 
         .quote-box {
@@ -234,6 +250,10 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            justify-items: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .value-card {
@@ -243,6 +263,8 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             border-top: 4px solid #e74c3c;
+            width: 100%;
+            max-width: 280px;
         }
 
         .value-icon {
@@ -279,40 +301,52 @@
             color: #2c3e50;
             margin-top: 0.5rem;
         }
+
         /* ===== STATS SECTION ===== */
-.stats {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: white;
-    text-align: center;
-}
-
-.stats h2 {
-    color: white;
-}
-
-.stat-item {
-    padding: 2rem;
-}
-
-.stat-item .stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #a8d8ea;
-    display: block;
-}
-
-.stat-item .stat-label {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    color: white;
-}
-
-        /* ===== CTA SECTION ===== */
-        .cta-section {
+        .stats {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             text-align: center;
+        }
+
+        .stats h2 {
+            color: white;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-item .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #a8d8ea;
+            display: block;
+        }
+
+        .stat-item .stat-label {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            color: white;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            text-align: center;
             padding: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
         }
 
         .cta-button {
@@ -337,13 +371,13 @@
 
         .cta-button.secondary {
             background: transparent;
-            border: 2px solid white;
-            color: white;
+            border: 2px solid #e74c3c;
+            color: #e74c3c;
         }
 
         .cta-button.secondary:hover {
-            background: white;
-            color: #2c3e50;
+            background: #e74c3c;
+            color: white;
         }
 
         /* ===== FOOTER ===== */
@@ -392,6 +426,10 @@
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -529,7 +567,7 @@
         </section>
 
         <!-- OUR BEGINNING SECTION -->
-        <section class="section-alt">
+        <section class="section-dark">
             <div class="container">
                 <h2>Our Beginning</h2>
                 <div class="highlight-box">
@@ -548,10 +586,6 @@
                         <p>As a newly established organization, we're excited about the growth opportunities ahead. We're committed to expanding our reach, developing comprehensive support programs, and creating meaningful partnerships that will enhance the lives and careers of pregnant employees and parents.</p>
                         <p>Every step of our journey is focused on building a future where parenthood and professional success go hand in hand.</p>
                     </div>
-                </div>
-                
-                <div class="quote-box">
-                    "We may be new, but our commitment is unwavering. Family Beginnings Corporation is here to grow alongside the families we serve, creating lasting positive change in workplaces across our community."
                 </div>
             </div>
         </section>
@@ -600,7 +634,7 @@
             </div>
         </section>
 
-<!-- STATS SECTION -->
+        <!-- STATS SECTION -->
         <section class="stats">
             <div class="container">
                 <h2>Our Impact</h2>
@@ -624,12 +658,12 @@
         <!-- CALL TO ACTION -->
         <section class="cta-section">
             <div class="container">
-                <h2 style="color: white; margin-bottom: 2rem;">Ready to Protect Your Rights?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #e8f4f8;">
+                <h2>Ready to Protect Your Rights?</h2>
+                <p>
                     Whether you're facing workplace discrimination, need accommodation support, or want to learn more about your rights, Family Beginnings is here to help.
                 </p>
-                <a href="index.html#contact" class="cta-button">Get Free Consultation</a>
-                <a href="index.html#donate" class="cta-button secondary">Support Our Mission</a>
+                <a href="contact.html" class="cta-button">Get Free Consultation</a>
+                <a href="donate.html" class="cta-button secondary">Support Our Mission</a>
             </div>
         </section>
     </main>
