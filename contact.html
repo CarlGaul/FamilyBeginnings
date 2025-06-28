@@ -415,7 +415,7 @@
         </div>
     </footer>
 
-    <script>
+   <script>
         // ===== HEADER BACKGROUND ON SCROLL =====
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -431,6 +431,13 @@
             e.preventDefault();
             alert('Thank you for your message. We will contact you within 24 hours to schedule your free consultation.');
         });
+    </script>
+
+    <script>
+        // Load navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
 </body>
 </html>
