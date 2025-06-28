@@ -547,7 +547,6 @@
     <a href="index.html" class="logo">Family Beginnings</a>
     <div id="navigation"></div>
 </nav>
-        </nav>
     </header>
 
     <main>
@@ -755,6 +754,11 @@
         
         // ===== INITIAL ANIMATION CHECK =====
         document.addEventListener('DOMContentLoaded', animateStats);
-    </script>
+ <script>
+    // Load navigation
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('navigation').innerHTML = data);
+</script>
 </body>
 </html>
