@@ -501,7 +501,7 @@
         </div>
     </footer>
 
-    <script>
+   <script>
         // ===== SMOOTH SCROLLING FOR ANCHOR LINKS =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -559,6 +559,11 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Load navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
 </body>
 </html>
