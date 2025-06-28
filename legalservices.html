@@ -621,13 +621,18 @@
             });
         }, observerOptions);
 
-        // Apply animation to cards
+ // Apply animation to cards
         document.querySelectorAll('.timeline-card, .service-detail-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+
+        // Load navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
 </body>
 </html>
