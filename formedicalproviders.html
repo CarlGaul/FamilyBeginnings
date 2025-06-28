@@ -423,7 +423,7 @@ footer {
             });
         });
 
-        // ===== HEADER BACKGROUND ON SCROLL =====
+    // ===== HEADER BACKGROUND ON SCROLL =====
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -432,6 +432,11 @@ footer {
                 header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
             }
         });
+
+        // Load navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
 </body>
 </html>
