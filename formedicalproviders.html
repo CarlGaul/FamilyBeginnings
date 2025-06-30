@@ -299,6 +299,7 @@ footer {
             }
         }
     </style>
+    <link rel="stylesheet" href="css/responsive-nav.css">
 </head>
 
 <body>
@@ -309,7 +310,20 @@ footer {
     <div id="navigation"></div>
 </nav>
     </header>
-
+<!-- Mobile Navigation Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="legalservices.html" onclick="closeMobileMenu()">Legal Services</a></li>
+        <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
+        <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
+        <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
+        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
+    </ul>
+</div>
+<div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
     <main>
         <!-- PAGE HERO -->
         <section class="page-hero">
@@ -438,5 +452,6 @@ footer {
             .then(response => response.text())
             .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
+    <script src="js/responsive-nav.js"></script>
 </body>
 </html>
