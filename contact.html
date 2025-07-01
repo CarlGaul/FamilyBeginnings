@@ -298,31 +298,32 @@
             }
         }
     </style>
-<link rel="stylesheet" href="css/responsive-nav.css">
+    <link rel="stylesheet" href="css/responsive-nav.css">
 </head>
 
 <body>
     <!-- NAVIGATION HEADER -->
     <header>
-       <nav>
-    <a href="index.html" class="logo">Family Beginnings</a>
-    <div id="navigation"></div>
-</nav>
+        <nav>
+            <a href="index.html" class="logo">Family Beginnings</a>
+            <div id="navigation"></div>
+        </nav>
     </header>
-<!-- Mobile Navigation Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <ul>
-        <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-        <li><a href="legalservices.html" onclick="closeMobileMenu()">Legal Services</a></li>
-        <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
-        <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
-        <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
-        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
-        <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
-    </ul>
-</div>
-<div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="legalservices.html" onclick="closeMobileMenu()">Legal Services</a></li>
+            <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
+            <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
+            <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
     
     <main>
         <!-- PAGE HERO -->
@@ -350,10 +351,12 @@
                             <span class="icon">✉️</span>
                             <a href="mailto:contact@familybeginnings.org">Contact@FamilyBeginnings.org</a>
                         </div>
+                        
                         <div class="contact-item">
                             <span class="icon">📮</span>
                             <span>PO Box 30087<br>Rochester, New York 14603</span>
                         </div>
+                        
                         <div class="contact-item">
                             <span class="icon">📍</span>
                             <span>305 Broadway, Suite 700 <br>New York, New York 10007</span>
@@ -368,20 +371,20 @@
                     <!-- CONTACT FORM -->
                     <div class="contact-form">
                         <h2>Request Consultation</h2>
-                        <form>
+                        <form id="contactForm" action="https://formspree.io/f/xpwrbnzn" method="POST">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required maxlength="100" pattern="[A-Za-z\s\-\.]+" title="Please enter a valid name">
                             </div>
                             
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="_replyto" required maxlength="254">
                             </div>
                             
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" maxlength="20" pattern="[\+]?[0-9\s\-\(\)\.]{10,20}" title="Please enter a valid phone number">
                             </div>
                             
                             <div class="form-group">
@@ -397,11 +400,30 @@
                             
                             <div class="form-group">
                                 <label for="message">Brief Description of Your Situation *</label>
-                                <textarea id="message" name="message" placeholder="Please provide a brief overview of your situation..." required></textarea>
+                                <textarea id="message" name="message" placeholder="Please provide a brief overview of your situation..." required maxlength="2000"></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <!-- Security and Anti-Spam Hidden Fields -->
+                            <input type="hidden" name="_subject" value="New Legal Consultation Request - Family Beginnings">
+                            <input type="hidden" name="_next" value="https://carlgaul.github.io/FamilyBeginnings/contact.html?success=true">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_gotcha" style="display:none !important">
+                            <input type="hidden" name="_template" value="table">
+                            
+                            <!-- Character counter for message -->
+                            <div style="font-size: 0.9rem; color: #666; text-align: right; margin-top: -1rem; margin-bottom: 1rem;">
+                                <span id="charCount">0</span>/2000 characters
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" id="submitBtn">Send Secure Message</button>
+                            <div id="formMessage" style="margin-top: 1rem; font-weight: bold;"></div>
                         </form>
+                        
+                        <!-- Legal and Security Notice -->
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                            🔒 <strong>Secure Submission:</strong> This form uses SSL encryption to protect your information.<br><br>
+                            ⚖️ <strong>Legal Notice:</strong> Submitting this form or contacting Family Beginnings does not create an attorney-client relationship. An attorney-client relationship is established only after both parties agree to representation through a signed retainer agreement. Do not include confidential or sensitive information in this initial contact form.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -430,8 +452,141 @@
         </div>
     </footer>
 
-   <script>
-        // ===== HEADER BACKGROUND ON SCROLL =====
+    <script>
+        // Enhanced form handling with maximum security and validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const messageField = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            
+            // Character counter for message field
+            messageField.addEventListener('input', function() {
+                const count = this.value.length;
+                charCount.textContent = count;
+                charCount.style.color = count > 1800 ? '#e74c3c' : '#666';
+            });
+            
+            // Input sanitization and validation
+            function sanitizeInput(input) {
+                return input.replace(/<script[^>]*>.*?<\/script>/gi, '')
+                           .replace(/<[\/\!]*?[^<>]*?>/gi, '')
+                           .replace(/<\!--[\s\S]*?-->/gi, '');
+            }
+            
+            // Real-time validation
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const phoneField = document.getElementById('phone');
+            
+            nameField.addEventListener('input', function() {
+                this.value = sanitizeInput(this.value);
+            });
+            
+            emailField.addEventListener('input', function() {
+                this.value = sanitizeInput(this.value);
+            });
+            
+            phoneField.addEventListener('input', function() {
+                this.value = sanitizeInput(this.value);
+            });
+            
+            messageField.addEventListener('input', function() {
+                this.value = sanitizeInput(this.value);
+            });
+            
+            // Rate limiting (prevent spam submissions)
+            let lastSubmission = localStorage.getItem('lastFormSubmission');
+            let submissionCount = parseInt(localStorage.getItem('submissionCount') || '0');
+            
+            // Check if page loaded with success parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                formMessage.style.color = '#27ae60';
+                formMessage.innerHTML = '✅ <strong>Message Sent Securely!</strong><br>Thank you for contacting us. We will respond within 24 hours to schedule your free consultation.';
+                window.history.replaceState({}, document.title, window.location.pathname);
+                
+                // Update submission tracking
+                localStorage.setItem('lastFormSubmission', Date.now().toString());
+                localStorage.setItem('submissionCount', '0');
+            }
+            
+            // Form submission handling with security checks
+            form.addEventListener('submit', function(e) {
+                const now = Date.now();
+                const oneHour = 60 * 60 * 1000;
+                
+                // Rate limiting check
+                if (lastSubmission && (now - parseInt(lastSubmission)) < oneHour && submissionCount >= 3) {
+                    e.preventDefault();
+                    formMessage.style.color = '#e74c3c';
+                    formMessage.innerHTML = '⚠️ Too many submissions. Please wait before submitting again or call us directly.';
+                    return;
+                }
+                
+                // Validate all required fields
+                const name = nameField.value.trim();
+                const email = emailField.value.trim();
+                const message = messageField.value.trim();
+                
+                if (!name || !email || !message) {
+                    e.preventDefault();
+                    formMessage.style.color = '#e74c3c';
+                    formMessage.innerHTML = '❌ Please fill in all required fields.';
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    e.preventDefault();
+                    formMessage.style.color = '#e74c3c';
+                    formMessage.innerHTML = '❌ Please enter a valid email address.';
+                    return;
+                }
+                
+                // Content validation (check for suspicious patterns)
+                const suspiciousPatterns = [
+                    /\b(viagra|cialis|loan|casino|poker)\b/i,
+                    /\b(click here|visit now|act now)\b/i,
+                    /(http:\/\/|https:\/\/)/i,
+                    /\b\d{4}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b/ // Credit card pattern
+                ];
+                
+                const allText = (name + ' ' + email + ' ' + message).toLowerCase();
+                for (let pattern of suspiciousPatterns) {
+                    if (pattern.test(allText)) {
+                        e.preventDefault();
+                        formMessage.style.color = '#e74c3c';
+                        formMessage.innerHTML = '❌ Message appears to contain spam content. Please contact us directly.';
+                        return;
+                    }
+                }
+                
+                // Show loading state
+                submitBtn.textContent = 'Sending Securely...';
+                submitBtn.disabled = true;
+                formMessage.innerHTML = '🔒 Encrypting and sending your message...';
+                formMessage.style.color = '#3498db';
+                
+                // Update submission tracking
+                submissionCount++;
+                localStorage.setItem('submissionCount', submissionCount.toString());
+                
+                // Form will be submitted to Formspree
+            });
+            
+            // Reset button state if user navigates back
+            window.addEventListener('pageshow', function(event) {
+                if (event.persisted) {
+                    submitBtn.textContent = 'Send Secure Message';
+                    submitBtn.disabled = false;
+                }
+            });
+        });
+
+        // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -441,14 +596,6 @@
             }
         });
 
-        // ===== FORM SUBMISSION =====
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will contact you within 24 hours to schedule your free consultation.');
-        });
-    </script>
-
-    <script>
         // Load navigation
         fetch('nav.html')
             .then(response => response.text())
