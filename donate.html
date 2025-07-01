@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Family Beginnings</title>
-    <meta name="description" content="Support Family Beginnings' mission to provide legal advocacy for new and expecting parents in New York.">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Support Legal Advocacy for Families - Donate to Family Beginnings</title>
+    <meta name="description" content="Support pregnant workers and new parents in NY facing workplace discrimination. Your donation helps provide free legal advocacy services to families who need legal protection most. Donate today.">
+    
+    <!-- Keywords Meta Tag -->
+    <meta name="keywords" content="donate legal advocacy, support pregnancy discrimination victims, New York family legal aid, workplace discrimination donations, legal aid for pregnant workers, family rights charity">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Support Legal Advocacy for Families - Donate to Family Beginnings">
+    <meta property="og:description" content="Help pregnant workers and new parents fight workplace discrimination. Your donation provides free legal services to families in need.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://familybeginningslegal.com/donate.html">
+    <meta property="og:image" content="https://familybeginningslegal.com/images/donate-family-advocacy.jpg">
+    <meta property="og:site_name" content="Family Beginnings Legal Advocacy">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support Legal Advocacy for Families - Donate to Family Beginnings">
+    <meta name="twitter:description" content="Help pregnant workers and new parents fight workplace discrimination. Your donation makes a difference.">
+    <meta name="twitter:image" content="https://familybeginningslegal.com/images/donate-family-advocacy.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Family Beginnings Legal Advocacy">
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York">
+    <meta name="language" content="en-US">
+    <link rel="canonical" href="https://familybeginningslegal.com/donate.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Family Beginnings Legal Advocacy",
+        "description": "Legal advocacy organization providing free legal services to pregnant workers and new parents facing workplace discrimination in New York.",
+        "url": "https://familybeginningslegal.com/donate.html",
+        "logo": "https://familybeginningslegal.com/images/family-beginnings-logo.png",
+        "foundingDate": "2024",
+        "areaServed": {
+            "@type": "State",
+            "name": "New York"
+        },
+        "knowsAbout": [
+            "Pregnancy Discrimination Law",
+            "Workplace Rights",
+            "Employment Law",
+            "Family Legal Advocacy"
+        ],
+        "seeks": {
+            "@type": "Demand",
+            "name": "Financial Support",
+            "description": "Donations to provide free legal advocacy services for pregnant workers and new parents facing workplace discrimination"
+        },
+        "potentialAction": {
+            "@type": "DonateAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://familybeginningslegal.com/donate.html"
+            }
+        }
+    }
+    </script>
     
     <style>
         /* ===== BASIC RESET AND TYPOGRAPHY ===== */
@@ -65,17 +127,38 @@
             color: #a8d8ea;
         }
 
+        /* ===== BREADCRUMBS ===== */
+        .breadcrumbs {
+            background-color: #ecf0f1;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            margin-top: 80px;
+        }
+
+        .breadcrumbs a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumbs span {
+            color: #7f8c8d;
+        }
+
         /* ===== MAIN CONTENT STYLES ===== */
         main {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px);
+            min-height: calc(100vh - 160px);
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 2rem 0;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 2rem;
             text-align: center;
@@ -108,9 +191,10 @@
             font-size: 1.3rem;
             color: #666;
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
 
         .icon {
@@ -131,7 +215,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-            margin-top: 1rem;
+            margin: 0.5rem;
         }
 
         .cta-button:hover {
@@ -140,23 +224,113 @@
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
 
-        .support-text {
+        .cta-button.secondary {
+            background: #3498db;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .cta-button.secondary:hover {
+            background: #2980b9;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        /* ===== IMPACT SECTION ===== */
+        .impact-section {
             background: #f8f9fa;
-            padding: 2rem;
+            padding: 3rem 2rem;
             border-radius: 15px;
-            margin-top: 3rem;
+            margin: 3rem 0;
             border: 2px solid #e8f4f8;
         }
 
-        .support-text h3 {
+        .impact-section h3 {
             color: #2c3e50;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .impact-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .impact-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            display: block;
+        }
+
+        .impact-stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== SUPPORT OPTIONS ===== */
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #27ae60;
+            text-align: left;
+        }
+
+        .support-card h4 {
+            color: #2c3e50;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
         }
 
-        .support-text p {
-            font-size: 1.1rem;
-            color: #555;
+        .support-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .support-card .icon-small {
+            font-size: 2rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== MISSION STATEMENT ===== */
+        .mission-statement {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .mission-statement h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .mission-statement p {
+            font-size: 1.2rem;
+            color: #fff;
             margin-bottom: 0;
         }
 
@@ -166,9 +340,7 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 2rem;
         }
 
         .footer-content {
@@ -213,6 +385,18 @@
             .icon {
                 font-size: 4rem;
             }
+
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .support-options {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-section {
+                padding: 2rem 1rem;
+            }
         }
     </style>
 <link rel="stylesheet" href="css/responsive-nav.css">
@@ -240,20 +424,51 @@
     </ul>
 </div>
 <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Support Our Mission</span>
+        </div>
+    </nav>
+
     <main>
         <div class="container">
             <div class="coming-soon">
-                <span class="icon">🚀</span>
-                <h1>Donate</h1>
-                <h2>Coming Soon!</h2>
-                <p>We're working hard to launch our donation platform to help support families in need of legal advocacy. Your contributions will help us provide free legal services to more expecting and new parents facing workplace discrimination.</p>
+                <span class="icon">💝</span>
+                <h1>Support Legal Advocacy for New York Families</h1>
+                <h2>Donation Platform Coming Soon!</h2>
+                <p>We're building a secure donation platform to help provide free legal advocacy services to pregnant workers and new parents facing workplace discrimination in New York. Your support will directly fund legal representation for families who need it most but can't afford legal fees.</p>
                 
-                <div class="support-text">
-                    <h3>Want to Support Our Mission Now?</h3>
-                    <p>Contact us directly to learn about other ways you can help support our legal advocacy work for families in New York.</p>
+
+
+                <div class="mission-statement">
+                    <h3>Our Mission: Equal Rights for Working Families</h3>
+                    <p>No pregnant worker or new parent should face discrimination, harassment, or job loss because of their family status. Your donation ensures that financial barriers never prevent a family from accessing the legal advocacy they deserve.</p>
+                </div>
+
+                <div class="support-options">
+                    <div class="support-card">
+                        <span class="icon-small">🤝</span>
+                        <h4>Support Our Work Today</h4>
+                        <p>Contact us to learn about immediate ways you can support our legal advocacy mission while our donation platform is being developed.</p>
+                    </div>
+                    
+                    <div class="support-card">
+                        <span class="icon-small">📧</span>
+                        <h4>Get Updates</h4>
+                        <p>Stay informed about our donation platform launch and receive updates on how your future contributions are making a difference for New York families.</p>
+                    </div>
+                    
+                    <div class="support-card">
+                        <span class="icon-small">📢</span>
+                        <h4>Spread Awareness</h4>
+                        <p>Help us reach more families in need by sharing information about our free legal advocacy services with your network and community.</p>
+                    </div>
                 </div>
                 
-                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="contact.html" class="cta-button" aria-label="Contact us about supporting our mission">Contact Us About Supporting Our Mission</a>
+                <a href="legalservices.html" class="cta-button secondary" aria-label="Learn about our legal services">Learn About Our Legal Services</a>
             </div>
         </div>
     </main>
@@ -261,7 +476,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p>&copy; 2025 Family Beginnings Legal Advocacy. All rights reserved.</p>
             <p class="footer-disclaimer">
                 This website provides general information only and does not constitute legal advice. 
                 An attorney-client relationship is not formed until a retainer agreement is signed.
@@ -279,6 +494,40 @@
                 header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
             }
         });
+
+        // ===== ANIMATE IMPACT STATS ON SCROLL =====
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.impact-stat, .support-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // CSS for animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
 
         // Load navigation
         fetch('nav.html')
