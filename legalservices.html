@@ -46,6 +46,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #e8f4f8;
+            text-decoration: none;
         }
 
         .nav-links {
@@ -121,6 +122,170 @@
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
 
+        /* ===== TIMELINE STYLES ===== */
+        .timeline-section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Timeline vertical line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #e74c3c, #a8d8ea);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 2rem);
+            border-left: 5px solid #e74c3c;
+        }
+
+        /* Alternate sides */
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 2rem;
+            margin-right: auto;
+            border-left: none;
+            border-right: 5px solid #e74c3c;
+        }
+
+        /* Timeline circles */
+        .timeline-circle {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .timeline-phase {
+            font-size: 0.9rem;
+            color: #e74c3c;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .timeline-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        /* Subsections within timeline items */
+        .subsection {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid #a8d8ea;
+        }
+
+        .subsection h4 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .subsection p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* Service lists */
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .service-list li:before {
+            content: '✓';
+            color: #e74c3c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* New York Law Highlight */
+        .ny-law-highlight {
+            background: linear-gradient(135deg, #e8f4f8, #a8d8ea);
+            border: 2px solid #a8d8ea;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .ny-law-highlight h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .ny-law-highlight p {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
         /* ===== SECTION STYLES ===== */
         section {
             padding: 4rem 0;
@@ -145,197 +310,6 @@
             height: 4px;
             background: #e74c3c;
             margin: 1rem auto;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            color: #34495e;
-            margin-bottom: 1.5rem;
-        }
-
-        /* ===== JOURNEY TIMELINE ===== */
-        .journey-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
-        }
-
-        .journey-timeline {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .timeline-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 5px solid #e74c3c;
-            position: relative;
-        }
-
-        .timeline-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .timeline-icon {
-            background: #e74c3c;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .timeline-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-card p {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .service-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-            color: #555;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .service-list li:before {
-            content: '✓';
-            color: #e74c3c;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .service-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* ===== DETAILED SERVICES GRID ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-detail-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid #e74c3c;
-        }
-
-        .service-detail-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .service-detail-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .service-detail-card .icon {
-            font-size: 1.5rem;
-            color: #e74c3c;
-        }
-
-        /* ===== LEGAL PROTECTION SECTION ===== */
-        .protection-section {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-        }
-
-        .protection-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .protection-section h2 {
-            color: white;
-        }
-
-        .protection-section h2::after {
-            background: #a8d8ea;
-        }
-
-        .protection-highlights {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .protection-highlights .highlight-item:last-child {
-            grid-column: 1 / -1;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        .highlight-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .highlight-icon {
-            font-size: 3rem;
-            color: #a8d8ea;
-            margin-bottom: 1rem;
-        }
-
-        .highlight-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* ===== NONPROFIT MESSAGE ===== */
-        .nonprofit-section {
-            background: #e8f4f8;
-            text-align: center;
-        }
-
-        .nonprofit-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .nonprofit-section p {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-
-        .nonprofit-highlight {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-top: 2rem;
         }
 
         /* ===== FOOTER ===== */
@@ -381,20 +355,26 @@
                 font-size: 2rem;
             }
 
-            .journey-timeline,
-            .services-grid,
-            .protection-highlights {
-                grid-template-columns: 1fr;
+            /* Mobile timeline adjustments */
+            .timeline-container::before {
+                left: 30px;
             }
 
-            .protection-highlights .highlight-item:last-child {
-                grid-column: 1;
-                max-width: none;
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+                border-left: 5px solid #e74c3c !important;
+                border-right: none !important;
             }
 
-            .timeline-card,
-            .service-detail-card {
-                padding: 2rem;
+            .timeline-circle {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+
+            .timeline-title {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -409,176 +389,186 @@
     <div id="navigation"></div>
 </nav>
     </header>
-<!-- Mobile Navigation Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <ul>
-        <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-        <li><a href="legalservices.html" onclick="closeMobileMenu()">Legal Services</a></li>
-        <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
-        <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
-        <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
-        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
-        <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
-    </ul>
-</div>
-<div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="legalservices.html" onclick="closeMobileMenu()">Legal Services</a></li>
+            <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
+            <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
+            <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
     <main>
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="container">
-                <h1>Comprehensive Legal Services for Every Step</h1>
-                <p>From preconception planning to postpartum protection, Family Beginnings provides dedicated legal guidance throughout your journey to parenthood.</p>
+                <h1>Your Legal Journey Through Parenthood</h1>
+                <p>From prenatal care to postpartum protection, Family Beginnings provides comprehensive legal support at every stage of your path to parenthood.</p>
                 <a href="contact.html" class="cta-button">Get Your Free Consultation</a>
             </div>
         </section>
 
-        <!-- NONPROFIT MESSAGE -->
-        <section class="nonprofit-section">
+        <!-- TIMELINE SECTION -->
+        <section class="timeline-section">
             <div class="container">
-                <div class="nonprofit-content">
-                    <h2>Nonprofit Legal Advocacy</h2>
-                    <p>As a nonprofit organization, Family Beginnings is committed to making legal protection accessible to all expecting and new parents, regardless of their financial situation.</p>
-                    <p>Our mission is to ensure that the workplace supports your path to parenthood and that becoming a parent never compromises your professional opportunities.</p>
-                    <div class="nonprofit-highlight">
-                        <h3>Free Initial Consultations</h3>
-                        <p>Every family deserves to know their rights. We offer free consultations to help you understand your legal protections and options.</p>
-                        <p><strong>Income-Based Services:</strong> We work with clients regardless of their economic situation. Our fee structure is designed to ensure that quality legal representation is accessible to everyone, with rates that scale based on your ability to pay.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- JOURNEY TIMELINE -->
-        <section class="journey-section">
-            <div class="container">
-                <h2>Support at Every Stage</h2>
-                <div class="journey-timeline">
-                    <div class="timeline-card">
-                        <div class="timeline-icon">💕</div>
-                        <h3>Pre-Conception Planning</h3>
-                        <p>Before you conceive, we help protect your rights during fertility treatments and family planning.</p>
-                        <ul class="service-list">
-                            <li>Time off for fertility consultations</li>
-                            <li>IVF and treatment accommodation</li>
-                            <li>Insurance coverage advocacy</li>
-                            <li>Privacy protection during treatment</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-card">
-                        <div class="timeline-icon">🤰</div>
-                        <h3>Pre-Natal Stage</h3>
-                        <p>From the moment you're expecting, we help protect your workplace rights and secure necessary accommodations.</p>
-                        <ul class="service-list">
-                            <li>Draft accommodation request letters</li>
-                            <li>Navigate pregnancy disclosure decisions</li>
-                            <li>Secure prenatal appointment time</li>
-                            <li>Address early pregnancy complications</li>
-                            <li>Plan for maternity leave</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-card">
-                        <div class="timeline-icon">👶</div>
-                        <h3>Birth & Early Parenthood</h3>
-                        <p>Ensuring your leave rights are protected and your job security is maintained during this critical time.</p>
-                        <ul class="service-list">
-                            <li>Secure paid parental leave benefits</li>
-                            <li>Coordinate FMLA and state leave laws</li>
-                            <li>Address lactation accommodation needs</li>
-                            <li>Handle unexpected complications</li>
-                            <li>Protect against retaliation</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-card">
-                        <div class="timeline-icon">🏠</div>
-                        <h3>Post-Natal Transition</h3>
-                        <p>Supporting your return to work with proper accommodations and ongoing protection of your rights.</p>
-                        <ul class="service-list">
-                            <li>Negotiate flexible work arrangements</li>
-                            <li>Secure temporary disability accommodations</li>
-                            <li>Address permanent accommodation needs</li>
-                            <li>Handle childcare-related scheduling</li>
-                            <li>Protect against discrimination</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DETAILED SERVICES -->
-        <section class="section-alt">
-            <div class="container">
-                <h2>Our Legal Services</h2>
-                <div class="services-grid">
-                    <div class="service-detail-card">
-                        <h3><span class="icon">⚖️</span>Legal Representation</h3>
-                        <p>When employers violate the law, we provide strong legal representation in negotiations, administrative proceedings, and litigation to hold them accountable and secure the compensation you deserve.</p>
-                    </div>
-
-                    <div class="service-detail-card">
-                        <h3><span class="icon">🤱</span>Lactation & Pumping Rights</h3>
-                        <p>We help secure appropriate lactation accommodations, including private pumping spaces, flexible scheduling for pumping breaks, and proper storage facilities as required by law.</p>
-                    </div>
-
-                    <div class="service-detail-card">
-                        <h3><span class="icon">📝</span>Document Preparation & Communication</h3>
-                        <p>We help you craft professional, legally sound communications with your employer, including accommodation requests, leave notifications, and correspondence that protects your rights while maintaining positive workplace relationships.</p>
-                    </div>
-
-                    <div class="service-detail-card">
-                        <h3><span class="icon">🛡️</span>Discrimination & Retaliation Protection</h3>
-                        <p>If you believe you're being mistreated because of your pregnancy or parental status, we investigate your situation, document violations, and take action to protect you from illegal discrimination and retaliation.</p>
-                    </div>
-
-                    <div class="service-detail-card">
-                        <h3><span class="icon">🏢</span>Workplace Accommodation Advocacy</h3>
-                        <p>We guide you through the accommodation process, helping you understand your rights, request reasonable modifications to your work environment, and ensure your employer meets their legal obligations.</p>
-                    </div>
-
-                    <div class="service-detail-card">
-                        <h3><span class="icon">⏰</span>Leave Rights Navigation</h3>
-                        <p>Understanding and coordinating federal FMLA, New York Paid Family Leave, disability benefits, and employer policies can be complex. We ensure you receive all the leave time and benefits you're entitled to.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LEGAL PROTECTION -->
-        <section class="protection-section">
-            <div class="container">
-                <div class="protection-content">
-                    <h2>When Employers Break the Law</h2>
-                    <p>If your employer fails to respect your workplace rights, Family Beginnings will stand up for you. We provide strong legal representation to ensure you receive justice and fair compensation.</p>
+                <h2>Legal Support Timeline</h2>
+                
+                <div class="timeline-container">
                     
-                    <div class="protection-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">💼</div>
-                            <h4>Employment Law Violations</h4>
-                            <p>Pregnancy discrimination, failure to accommodate, wrongful termination</p>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">💰</div>
-                            <h4>Financial Recovery</h4>
-                            <p>Lost wages, benefits, emotional distress, punitive damages</p>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">🔒</div>
-                            <h4>Job Protection</h4>
-                            <p>Reinstatement, policy changes, ongoing monitoring</p>
+                    <!-- PRE-NATAL CARE -->
+                    <div class="timeline-item">
+                        <div class="timeline-circle">💕</div>
+                        <div class="timeline-content">
+                            <div class="timeline-phase">Phase 1</div>
+                            <h3 class="timeline-title">Pre-Natal Care</h3>
+                            <p class="timeline-description">Before pregnancy and during early planning, protect your rights to fertility treatments, prenatal appointments, and pregnancy-related healthcare.</p>
+                            
+                            <div class="ny-law-highlight">
+                                <h3>🗽 New York's Historic Prenatal Leave Law</h3>
+                                <p>As of January 1, 2025, New York became the first state in the nation to provide 20 hours of paid prenatal leave per year for all pregnant employees, regardless of company size or how long they've worked for their employer.</p>
+                            </div>
+
+                            <h4>Covered Prenatal Services:</h4>
+                            <ul class="service-list">
+                                <li>Physical examinations and medical consultations with healthcare providers</li>
+                                <li>Fertility treatments including in vitro fertilization (IVF)</li>
+                                <li>Egg freezing and fertility preservation procedures</li>
+                                <li>Medical procedures, monitoring, and testing related to pregnancy</li>
+                                <li>Prenatal genetic testing and screenings</li>
+                                <li>Specialty consultations (high-risk pregnancy, maternal-fetal medicine)</li>
+                                <li>Ultrasounds and routine prenatal checkups</li>
+                            </ul>
+
+                            <p><strong>Important:</strong> This leave is available in hourly increments and is paid at your regular rate of pay. Your employer cannot ask for confidential medical details or require you to use other leave types first.</p>
                         </div>
                     </div>
+
+                    <!-- NATAL CARE -->
+                    <div class="timeline-item">
+                        <div class="timeline-circle">🤰</div>
+                        <div class="timeline-content">
+                            <div class="timeline-phase">Phase 2</div>
+                            <h3 class="timeline-title">Pregnancy Accommodations</h3>
+                            <p class="timeline-description">Once pregnant, you have federal and state rights to reasonable workplace accommodations throughout your pregnancy. The Pregnant Workers Fairness Act ensures employers must provide modifications that allow you to continue working safely.</p>
+
+                            <div class="subsection">
+                                <h4>🌅 Early Pregnancy (First Trimester)</h4>
+                                <p>Common accommodations during early pregnancy when symptoms like morning sickness and fatigue are most prevalent:</p>
+                                <ul class="service-list">
+                                    <li>Flexible scheduling for severe morning sickness</li>
+                                    <li>Modified work hours to accommodate nausea patterns</li>
+                                    <li>Permission to eat small snacks throughout the day</li>
+                                    <li>Time off for frequent prenatal appointments</li>
+                                    <li>Temporary reassignment away from hazardous substances</li>
+                                    <li>Closer parking or modified commute arrangements</li>
+                                    <li>Permission to keep crackers or ginger at workstation</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h4>☀️ Mid-Pregnancy (Second Trimester)</h4>
+                                <p>As your pregnancy progresses, different accommodations may become necessary:</p>
+                                <ul class="service-list">
+                                    <li>Ergonomic seating and workstation adjustments</li>
+                                    <li>Modified lifting restrictions (typically 20-25 lbs or less)</li>
+                                    <li>More frequent breaks to prevent prolonged standing</li>
+                                    <li>Assistance with physically demanding tasks</li>
+                                    <li>Modified travel requirements</li>
+                                    <li>Adjustment of workload during energy fluctuations</li>
+                                    <li>Permission to prop feet up while working</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h4>🌙 Late Pregnancy (Third Trimester)</h4>
+                                <p>During the final months, accommodations focus on comfort and safety as mobility becomes more challenging:</p>
+                                <ul class="service-list">
+                                    <li>More frequent bathroom breaks (every 1-2 hours)</li>
+                                    <li>Permission to keep a water bottle at all times</li>
+                                    <li>Comfortable seating options or ability to sit frequently</li>
+                                    <li>Reduced standing time or standing breaks</li>
+                                    <li>Modified work schedule to accommodate doctor appointments</li>
+                                    <li>Assistance with bending, reaching, or lifting</li>
+                                    <li>Flexible arrival times for comfort and safety</li>
+                                    <li>Permission to leave early if experiencing discomfort</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POSTPARTUM -->
+                    <div class="timeline-item">
+                        <div class="timeline-circle">👶</div>
+                        <div class="timeline-content">
+                            <div class="timeline-phase">Phase 3</div>
+                            <h3 class="timeline-title">Postpartum Protection</h3>
+                            <p class="timeline-description">After childbirth, comprehensive legal protections ensure you can recover, bond with your baby, and transition back to work with proper support and accommodations.</p>
+
+                            <div class="subsection">
+                                <h4>💰 Paid Parental Leave</h4>
+                                <ul class="service-list">
+                                    <li>New York Paid Family Leave: Up to 12 weeks at 67% of your average weekly wage</li>
+                                    <li>Coordination with federal Family and Medical Leave Act (FMLA)</li>
+                                    <li>Short-term disability benefits for childbirth recovery</li>
+                                    <li>Employer-provided parental leave benefits</li>
+                                    <li>Protection from retaliation for taking leave</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h4>🏥 Recovery Accommodations</h4>
+                                <ul class="service-list">
+                                    <li>Extended time off for cesarean section recovery</li>
+                                    <li>Temporary lifting restrictions post-delivery</li>
+                                    <li>Gradual return-to-work schedules</li>
+                                    <li>Modified duties during physical recovery</li>
+                                    <li>Flexible scheduling for follow-up medical appointments</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h4>🍼 Lactation and Pumping Rights</h4>
+                                <p>Federal and state laws protect your right to pump breast milk at work:</p>
+                                <ul class="service-list">
+                                    <li>Private, clean space for pumping (not a bathroom)</li>
+                                    <li>Reasonable break time for pumping sessions</li>
+                                    <li>Refrigeration for breast milk storage</li>
+                                    <li>Flexible scheduling around pumping needs</li>
+                                    <li>Protection from discrimination for breastfeeding/pumping</li>
+                                    <li>Accommodation for nursing mothers returning to work</li>
+                                    <li>Travel considerations for pumping mothers</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h4>⚕️ Temporary Disability Accommodations</h4>
+                                <ul class="service-list">
+                                    <li>Postpartum depression and anxiety support accommodations</li>
+                                    <li>Modified schedules for medical appointments</li>
+                                    <li>Ergonomic adjustments for physical changes</li>
+                                    <li>Temporary reassignment for safety reasons</li>
+                                    <li>Continued health insurance during leave periods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- CALL TO ACTION -->
-        <section>
+        <section class="section-alt">
             <div class="container" style="text-align: center;">
-                <h2>Don't Face This Alone</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">Pregnancy and parenthood should be celebrated, not penalized. Let our legal team protect your rights and your family's future.</p>
+                <h2>Protect Your Rights at Every Stage</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">Don't navigate pregnancy and parenthood workplace challenges alone. Family Beginnings provides expert legal guidance from preconception through your child's early years.</p>
                 <a href="contact.html" class="cta-button">Schedule Your Free Consultation Today</a>
             </div>
         </section>
@@ -620,10 +610,10 @@
             }
         });
 
-        // ===== ANIMATE CARDS ON SCROLL =====
+        // ===== TIMELINE SCROLL ANIMATIONS =====
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
@@ -635,12 +625,12 @@
             });
         }, observerOptions);
 
- // Apply animation to cards
-        document.querySelectorAll('.timeline-card, .service-detail-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        // Apply animation to timeline items
+        document.querySelectorAll('.timeline-content').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(item);
         });
 
         // Load navigation
