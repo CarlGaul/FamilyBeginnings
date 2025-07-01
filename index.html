@@ -8,6 +8,15 @@
     <title>Family Beginnings - NYC Pregnancy Discrimination Lawyer | Free Consultation</title>
     <meta name="description" content="NYC pregnancy discrimination lawyers providing free consultations for workplace accommodations, maternity leave rights, and pregnancy discrimination cases in New York. Nonprofit legal representation.">
     <meta name="keywords" content="pregnancy discrimination lawyer NYC, maternity leave attorney New York, workplace accommodation lawyer, pregnancy rights attorney, NYC employment lawyer, FMLA lawyer New York">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FQ1QS4HJZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1FQ1QS4HJZ');
+    </script>
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://carlgaul.github.io/FamilyBeginnings/index.html">
@@ -240,6 +249,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 5px solid #e74c3c;
             text-align: center;
+            cursor: pointer;
         }
 
         .service-card:hover {
@@ -455,6 +465,7 @@
             <li><a href="education.html" onclick="closeMobileMenu()">Education</a></li>
             <li><a href="formedicalproviders.html" onclick="closeMobileMenu()">Medical Providers</a></li>
             <li><a href="foremployers.html" onclick="closeMobileMenu()">Employers</a></li>
+            <li><a href="templates.html" onclick="closeMobileMenu()">Templates</a></li>
             <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
             <li><a href="donate.html" onclick="closeMobileMenu()">Donate</a></li>
         </ul>
@@ -479,19 +490,19 @@
             <div class="container">
                 <h2>Pregnancy Discrimination Legal Services</h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card" data-service="pregnancy-discrimination">
                         <span class="service-icon" role="img" aria-label="Legal representation">⚖️</span>
                         <h3>Pregnancy Discrimination Lawyers</h3>
                         <p>Expert legal advocacy for pregnancy discrimination cases and workplace violations under federal and New York state law.</p>
                     </div>
                     
-                    <div class="service-card">
+                    <div class="service-card" data-service="workplace-accommodations">
                         <span class="service-icon" role="img" aria-label="Workplace accommodations">🏢</span>
                         <h3>Workplace Accommodation Attorneys</h3>
                         <p>Securing reasonable pregnancy accommodations to protect your health, safety, and job security throughout your pregnancy.</p>
                     </div>
                     
-                    <div class="service-card">
+                    <div class="service-card" data-service="maternity-leave">
                         <span class="service-icon" role="img" aria-label="Maternity leave rights">🍼</span>
                         <h3>Maternity Leave Rights Lawyers</h3>
                         <p>Ensuring you receive full parental leave benefits under FMLA, New York Paid Family Leave, and employer policies.</p>
@@ -633,11 +644,119 @@
         }
     });
 
+    // ===== GOOGLE ANALYTICS EVENT TRACKING =====
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track CTA button clicks
+        document.querySelectorAll('.cta-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'cta_click', {
+                        'event_category': 'engagement',
+                        'event_label': this.textContent.trim(),
+                        'page_location': window.location.href
+                    });
+                }
+            });
+        });
+
+        // Track service card interactions
+        document.querySelectorAll('.service-card').forEach(function(card) {
+            card.addEventListener('click', function() {
+                const serviceName = this.querySelector('h3').textContent;
+                const serviceType = this.getAttribute('data-service');
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'service_interest', {
+                        'event_category': 'engagement',
+                        'event_label': serviceName,
+                        'service_type': serviceType
+                    });
+                }
+            });
+        });
+
+        // Track sidebar link clicks
+        document.querySelectorAll('.sidebar a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'internal_link_click', {
+                        'event_category': 'navigation',
+                        'event_label': this.textContent.trim(),
+                        'link_location': 'sidebar'
+                    });
+                }
+            });
+        });
+    });
+
+    // Track scroll depth milestones
+    let maxScrollReached = 0;
+    window.addEventListener('scroll', function() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        
+        if (scrollPercent > maxScrollReached) {
+            if (scrollPercent >= 25 && maxScrollReached < 25) {
+                maxScrollReached = 25;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': '25%',
+                        'value': 25
+                    });
+                }
+            } else if (scrollPercent >= 50 && maxScrollReached < 50) {
+                maxScrollReached = 50;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': '50%',
+                        'value': 50
+                    });
+                }
+            } else if (scrollPercent >= 75 && maxScrollReached < 75) {
+                maxScrollReached = 75;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': '75%',
+                        'value': 75
+                    });
+                }
+            } else if (scrollPercent >= 100 && maxScrollReached < 100) {
+                maxScrollReached = 100;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': '100%',
+                        'value': 100
+                    });
+                }
+            }
+        }
+    });
+
+    // Track time on page
+    let startTime = Date.now();
+    let timeTracked = false;
+    
+    window.addEventListener('beforeunload', function() {
+        if (!timeTracked && typeof gtag !== 'undefined') {
+            const timeSpent = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'time_on_page', {
+                'event_category': 'engagement',
+                'event_label': 'homepage',
+                'value': timeSpent
+            });
+            timeTracked = true;
+        }
+    });
+
     // Load navigation
     fetch('nav.html')
         .then(response => response.text())
-        .then(data => document.getElementById('navigation').innerHTML = data);
-</script>
+        .then(data => document.getElementById('navigation').innerHTML = data)
+        .catch(error => console.log('Navigation loading failed:', error));
+    </script>
     <script src="js/responsive-nav.js"></script>
 </body>
 </html>
