@@ -3,8 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Employers - Family Beginnings Legal Advocacy</title>
-    <meta name="description" content="Protect your business from pregnancy discrimination lawsuits. Family Beginnings helps employers create compliant workplace policies and practices.">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Pregnancy Discrimination Prevention for Employers | Family Beginnings Legal</title>
+    <meta name="description" content="Protect your business from costly pregnancy discrimination lawsuits. Expert legal consultation for NY employers on PWFA compliance, accommodation policies, and workplace discrimination prevention. Free employer consultation.">
+    
+    <!-- Keywords Meta Tag -->
+    <meta name="keywords" content="pregnancy discrimination prevention, employer legal compliance, PWFA compliance, workplace accommodation policies, New York employment law, pregnancy discrimination lawsuits, employer consultation, workplace discrimination attorney">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pregnancy Discrimination Prevention for Employers | Family Beginnings Legal">
+    <meta property="og:description" content="Protect your business from costly pregnancy discrimination lawsuits. Expert legal consultation for NY employers on PWFA compliance and workplace policies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://familybeginningslegal.com/foremployers.html">
+    <meta property="og:image" content="https://familybeginningslegal.com/images/employers-legal-compliance.jpg">
+    <meta property="og:site_name" content="Family Beginnings Legal Advocacy">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pregnancy Discrimination Prevention for Employers | Family Beginnings Legal">
+    <meta name="twitter:description" content="Protect your business from costly pregnancy discrimination lawsuits. Expert legal consultation for NY employers.">
+    <meta name="twitter:image" content="https://familybeginningslegal.com/images/employers-legal-compliance.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Family Beginnings Legal Advocacy">
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York">
+    <meta name="language" content="en-US">
+    <link rel="canonical" href="https://familybeginningslegal.com/foremployers.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Family Beginnings Legal Advocacy - Employer Services",
+        "description": "Legal consultation and compliance services for employers to prevent pregnancy discrimination and ensure workplace accommodation compliance.",
+        "url": "https://familybeginningslegal.com/foremployers.html",
+        "serviceType": "Employment Law Consultation",
+        "provider": {
+            "@type": "LegalService",
+            "name": "Family Beginnings Legal Advocacy",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "New York"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Employer Legal Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Policy Review & Development",
+                        "description": "Comprehensive audit of existing policies and creation of legally compliant pregnancy and parental leave policies"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Manager Training Programs",
+                        "description": "Interactive training sessions to educate supervisors on legal requirements and best practices"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "PWFA Compliance Consultation",
+                        "description": "Ensure full compliance with the Pregnant Workers Fairness Act and New York Human Rights Law"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     
     <style>
         /* ===== BASIC RESET AND TYPOGRAPHY ===== */
@@ -160,6 +242,26 @@
             margin: 1rem auto;
         }
 
+        /* ===== BREADCRUMBS ===== */
+        .breadcrumbs {
+            background-color: #ecf0f1;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumbs a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumbs span {
+            color: #7f8c8d;
+        }
+
         /* ===== RISK ALERT BOX ===== */
         .risk-alert {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
@@ -272,6 +374,52 @@
             font-size: 0.95rem;
         }
 
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            cursor: pointer;
+            border-bottom: 1px solid #ecf0f1;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
         /* ===== CALL TO ACTION ===== */
         .cta-section {
             background: #f8f9fa;
@@ -374,14 +522,22 @@
     </ul>
 </div>
 <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Employer Services</span>
+        </div>
+    </nav>
+
     <main>
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="container">
-                <h1>Protect Your Business from Pregnancy Discrimination Claims</h1>
-                <p class="subtitle">Proactive Legal Compliance for Forward-Thinking Employers</p>
-                <p>Don't wait for a lawsuit to discover gaps in your policies. Partner with Family Beginnings to create a legally compliant, family-friendly workplace that protects both your employees and your bottom line.</p>
-                <a href="contact.html" class="cta-button">Schedule Employer Consultation</a>
+                <h1>Pregnancy Discrimination Prevention for New York Employers</h1>
+                <p class="subtitle">Expert Legal Compliance Consultation & Policy Development</p>
+                <p>Protect your business from costly pregnancy discrimination lawsuits with proactive legal compliance. Our specialized employment law services help New York employers navigate PWFA requirements, create compliant workplace policies, and avoid expensive litigation.</p>
+                <a href="contact.html" class="cta-button" aria-label="Schedule free employer consultation">Schedule Free Employer Consultation</a>
             </div>
         </section>
 
@@ -389,20 +545,20 @@
         <section>
             <div class="container">
                 <div class="risk-alert">
-                    <h3>⚠️ The Cost of Non-Compliance is Rising</h3>
-                    <p>Pregnancy discrimination lawsuits are increasing, and the financial consequences for employers are severe. Don't let your business become a statistic.</p>
+                    <h3>⚠️ Rising Costs of Pregnancy Discrimination Non-Compliance</h3>
+                    <p>New York pregnancy discrimination lawsuits are increasing rapidly, with severe financial consequences for unprepared employers. The Pregnant Workers Fairness Act has strengthened employee rights and increased employer liability.</p>
                     <div class="risk-stats">
                         <div class="risk-stat">
-                            <span class="risk-stat-number">$200K</span>
-                            <div class="risk-stat-label">Average Litigation Cost</div>
+                            <span class="risk-stat-number">$200K+</span>
+                            <div class="risk-stat-label">Average Litigation Cost per Case</div>
                         </div>
                         <div class="risk-stat">
-                            <span class="risk-stat-number">10-20%</span>
-                            <div class="risk-stat-label">Yearly Award Increases</div>
+                            <span class="risk-stat-number">15-25%</span>
+                            <div class="risk-stat-label">Annual Increase in Discrimination Claims</div>
                         </div>
                         <div class="risk-stat">
-                            <span class="risk-stat-number">22.5</span>
-                            <div class="risk-stat-label">Months Average Litigation</div>
+                            <span class="risk-stat-number">18-24</span>
+                            <div class="risk-stat-label">Months Average Litigation Duration</div>
                         </div>
                     </div>
                 </div>
@@ -412,42 +568,42 @@
         <!-- BENEFITS SECTION -->
         <section class="section-alt">
             <div class="container">
-                <h2>Why Smart Employers Choose Prevention</h2>
+                <h2>Why New York Employers Choose Proactive Legal Compliance</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
                         <div class="benefit-icon">💰</div>
-                        <h3>Significant Cost Savings</h3>
-                        <p>Prevent expensive lawsuits, settlements, and legal fees. Our consultation services cost a fraction of what you'd pay in litigation.</p>
+                        <h3>Prevent Costly Litigation</h3>
+                        <p>Avoid expensive pregnancy discrimination lawsuits, EEOC complaints, and settlement costs. Our preventive legal consultation costs significantly less than defending a single discrimination claim.</p>
                     </div>
                     
                     <div class="benefit-card">
                         <div class="benefit-icon">🛡️</div>
-                        <h3>Legal Protection</h3>
-                        <p>Stay ahead of evolving New York employment laws and federal regulations with expert guidance tailored to your industry.</p>
+                        <h3>PWFA & NY Human Rights Law Compliance</h3>
+                        <p>Stay compliant with the Pregnant Workers Fairness Act, New York Human Rights Law, and evolving employment regulations with expert legal guidance tailored to your industry.</p>
                     </div>
                     
                     <div class="benefit-card">
                         <div class="benefit-icon">🌟</div>
-                        <h3>Enhanced Reputation</h3>
-                        <p>Build a positive employer brand that attracts top talent and demonstrates your commitment to workplace equality.</p>
+                        <h3>Enhanced Employer Brand</h3>
+                        <p>Build a positive workplace reputation that attracts top talent and demonstrates your commitment to employee rights and workplace equality.</p>
                     </div>
 
                     <div class="benefit-card">
                         <div class="benefit-icon">📈</div>
-                        <h3>Improved Productivity</h3>
-                        <p>Reduce turnover, boost employee morale, and create a more engaged workforce with family-friendly policies.</p>
+                        <h3>Increased Employee Retention</h3>
+                        <p>Reduce costly turnover, boost employee morale, and create a more productive workforce with legally compliant family-friendly workplace policies.</p>
                     </div>
 
                     <div class="benefit-card">
                         <div class="benefit-icon">⚖️</div>
-                        <h3>Regulatory Compliance</h3>
-                        <p>Ensure full compliance with the Pregnant Workers Fairness Act, New York Human Rights Law, and other applicable regulations.</p>
+                        <h3>Complete Regulatory Compliance</h3>
+                        <p>Ensure full compliance with federal and New York state employment laws, including accommodation requirements and anti-retaliation protections.</p>
                     </div>
 
                     <div class="benefit-card">
                         <div class="benefit-icon">🤝</div>
-                        <h3>Employee Relations</h3>
-                        <p>Foster trust and loyalty by demonstrating genuine care for your employees' wellbeing during life's most important moments.</p>
+                        <h3>Improved Employee Relations</h3>
+                        <p>Build trust and loyalty by demonstrating genuine commitment to employee wellbeing during pregnancy, childbirth, and family expansion.</p>
                     </div>
                 </div>
             </div>
@@ -456,36 +612,79 @@
         <!-- SERVICES SECTION -->
         <section>
             <div class="container">
-                <h2>Our Employer Services</h2>
+                <h2>Comprehensive Employer Legal Services</h2>
                 <div class="services-list">
                     <div class="service-item">
-                        <h4>Policy Review & Development</h4>
-                        <p>Comprehensive audit of existing policies and creation of legally compliant pregnancy and parental leave policies.</p>
+                        <h4>Pregnancy Discrimination Policy Review</h4>
+                        <p>Comprehensive audit of existing employment policies and creation of legally compliant pregnancy accommodation and parental leave policies that meet PWFA requirements.</p>
                     </div>
                     
                     <div class="service-item">
-                        <h4>Manager Training Programs</h4>
-                        <p>Interactive training sessions to educate supervisors on legal requirements and best practices.</p>
+                        <h4>Manager & HR Training Programs</h4>
+                        <p>Interactive legal training sessions to educate supervisors and HR personnel on pregnancy discrimination law, accommodation requirements, and compliance best practices.</p>
                     </div>
                     
                     <div class="service-item">
-                        <h4>Accommodation Protocols</h4>
-                        <p>Development of clear procedures for handling pregnancy-related accommodation requests.</p>
+                        <h4>Workplace Accommodation Protocols</h4>
+                        <p>Development of clear, legally compliant procedures for handling pregnancy-related accommodation requests and documentation requirements.</p>
                     </div>
                     
                     <div class="service-item">
-                        <h4>Documentation Systems</h4>
-                        <p>Implementation of proper documentation practices to protect your organization from potential claims.</p>
+                        <h4>Legal Documentation Systems</h4>
+                        <p>Implementation of proper documentation practices and record-keeping systems to protect your organization from potential discrimination claims.</p>
                     </div>
                     
                     <div class="service-item">
-                        <h4>Legal Compliance Audits</h4>
-                        <p>Regular assessments to ensure ongoing compliance with changing employment laws.</p>
+                        <h4>PWFA Compliance Audits</h4>
+                        <p>Regular legal assessments to ensure ongoing compliance with changing federal and New York state employment laws and discrimination regulations.</p>
                     </div>
                     
                     <div class="service-item">
-                        <h4>Crisis Response Support</h4>
-                        <p>Immediate guidance when discrimination complaints arise, helping you respond appropriately.</p>
+                        <h4>Discrimination Claim Response</h4>
+                        <p>Immediate legal guidance when EEOC complaints or discrimination claims arise, helping you respond appropriately and minimize legal exposure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions About Employer Compliance</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What are the most common pregnancy discrimination violations by New York employers?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Common violations include refusing reasonable accommodations, retaliating against employees who request accommodations, failing to provide equal treatment, and not having compliant leave policies. Many employers also make discriminatory comments or decisions based on assumptions about pregnant employees' capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What does the Pregnant Workers Fairness Act require from employers?
+                    </div>
+                    <div class="faq-answer">
+                        <p>The PWFA requires employers with 15+ employees to provide reasonable accommodations for known limitations related to pregnancy, childbirth, or related medical conditions, unless it causes undue hardship. This includes modifications to work duties, schedules, or workplace conditions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How much does pregnancy discrimination legal consultation cost?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our initial employer consultation is free. Ongoing compliance services are customized based on your organization's size and needs. The cost is significantly less than defending a single discrimination lawsuit, which averages $200,000+ in legal fees alone.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What size companies need pregnancy discrimination compliance help?
+                    </div>
+                    <div class="faq-answer">
+                        <p>While federal law applies to employers with 15+ employees, New York Human Rights Law covers employers with 4+ employees. Even smaller employers benefit from compliant policies to prevent costly litigation and create positive workplace culture.</p>
                     </div>
                 </div>
             </div>
@@ -495,10 +694,10 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to Protect Your Business?</h2>
-                    <p>Don't wait for a discrimination claim to expose weaknesses in your policies. Take proactive steps today to safeguard your organization and support your employees.</p>
-                    <p><strong>Schedule a confidential consultation</strong> to discuss your specific needs and learn how we can help you create a legally compliant, family-friendly workplace.</p>
-                    <a href="contact.html" class="cta-button">Get Started Today</a>
+                    <h2>Protect Your New York Business Today</h2>
+                    <p>Don't wait for an EEOC complaint or discrimination lawsuit to expose policy gaps. Take proactive steps now to safeguard your organization and support your employees with legally compliant workplace practices.</p>
+                    <p><strong>Schedule a confidential legal consultation</strong> to discuss your specific compliance needs and learn how we can help you create a legally protected, family-friendly workplace.</p>
+                    <a href="contact.html" class="cta-button" aria-label="Start employer legal consultation">Get Free Consultation</a>
                 </div>
             </div>
         </section>
@@ -507,7 +706,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
+            <p>&copy; 2025 Family Beginnings Legal Advocacy. All rights reserved.</p>
             <p class="footer-disclaimer">
                 This website provides general information only and does not constitute legal advice. 
                 An attorney-client relationship is not formed until a retainer agreement is signed.
@@ -539,6 +738,24 @@
             header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
         }
     });
+
+    // ===== FAQ TOGGLE FUNCTIONALITY =====
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const isActive = element.classList.contains('active');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.classList.remove('active');
+            q.nextElementSibling.classList.remove('active');
+        });
+        
+        // Toggle current FAQ
+        if (!isActive) {
+            element.classList.add('active');
+            answer.classList.add('active');
+        }
+    }
 
     // ===== ANIMATE STATS ON SCROLL =====
     const observerOptions = {
