@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Family Beginnings</title>
-    <meta name="description" content="Learn about Family Beginnings' mission, values, and team dedicated to protecting pregnancy rights and supporting new parents.">
+    
+    <!-- SEO Optimized Meta Tags -->
+    <title>About Family Beginnings - NYC Pregnancy Discrimination Law Firm</title>
+    <meta name="description" content="Learn about Family Beginnings, a nonprofit law firm dedicated to protecting pregnancy rights and fighting workplace discrimination in New York since 2025.">
+    <meta name="keywords" content="pregnancy discrimination law firm NYC, nonprofit employment lawyers, maternity rights attorneys New York, workplace discrimination lawyers">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://carlgaul.github.io/FamilyBeginnings/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Family Beginnings - NYC Pregnancy Discrimination Law Firm">
+    <meta property="og:description" content="Learn about our nonprofit law firm dedicated to protecting pregnancy rights and fighting workplace discrimination in New York.">
+    <meta property="og:url" content="https://carlgaul.github.io/FamilyBeginnings/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://carlgaul.github.io/FamilyBeginnings/images/family-beginnings-og.jpg">
+
+    <!-- Schema for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "LegalService",
+            "name": "Family Beginnings",
+            "foundingDate": "2025-06-20",
+            "description": "Nonprofit law firm specializing in pregnancy discrimination and workplace rights.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "New York",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            }
+        }
+    }
+    </script>
     
     <style>
         /* ===== BASIC RESET AND TYPOGRAPHY ===== */
@@ -768,13 +801,12 @@
         
         // ===== INITIAL ANIMATION CHECK =====
         document.addEventListener('DOMContentLoaded', animateStats);
+        
+        // Load navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data);
     </script>
-    <script>
-    // Load navigation
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('navigation').innerHTML = data);
-</script>
     <script src="js/responsive-nav.js"></script>
 </body>
 </html>
