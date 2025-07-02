@@ -463,13 +463,15 @@
                 <div class="signup-form">
                     <h3>📧 Join Our Educational Mailing List</h3>
                     <p>Be the first to know about upcoming presentations, new workshops, and important updates about workplace rights for expecting and new parents.</p>
-                    <form id="mailingListForm">
+                    <form id="mailingListForm" action="https://formspree.io/f/mpwrnwel" method="POST">
+                        <input type="hidden" name="_subject" value="Add to mailing list">
+                        <input type="hidden" name="_next" value="https://carlgaul.github.io/FamilyBeginnings/education.html#success">
                         <div class="form-group">
-                            <input type="text" id="firstName" placeholder="First Name" required>
-                            <input type="text" id="lastName" placeholder="Last Name" required>
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Email Address" required>
+                            <input type="email" name="email" id="email" placeholder="Email Address" required>
                             <button type="submit" class="signup-button">Join List</button>
                         </div>
                     </form>
@@ -600,13 +602,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
-            <p class="footer-disclaimer">
-                This website provides general information only and does not constitute legal advice. 
-                An attorney-client relationship is not formed until a retainer agreement is signed.
-            </p>
-        </div>
+        <div id="footer-content"></div>
     </footer>
 
 <script>
@@ -636,19 +632,22 @@
 
         // ===== MAILING LIST FORM HANDLING =====
         document.getElementById('mailingListForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Show loading state
+            const submitButton = this.querySelector('.signup-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Joining...';
+            submitButton.disabled = true;
             
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            
-            // In a real implementation, you would send this data to your server
-            // For now, we'll just show a success message
-            alert(`Thank you, ${firstName}! You've been added to our mailing list. You'll receive an email confirmation shortly.`);
-            
-            // Clear the form
-            this.reset();
+            // Form will be submitted normally to Formspree
+            // On success, user will be redirected back with #success in URL
         });
+        
+        // Check if user was redirected back after successful submission
+        if (window.location.hash === '#success') {
+            alert('Thank you! You\'ve been successfully added to our mailing list.');
+            // Remove the hash from URL
+            history.replaceState(null, null, window.location.pathname);
+        }
 
         // ===== SMOOTH SCROLL TO MAILING LIST =====
         document.querySelectorAll('a[href="#mailingListForm"]').forEach(link => {
@@ -668,7 +667,14 @@
         // Load navigation
         fetch('nav.html')
             .then(response => response.text())
-            .then(data => document.getElementById('navigation').innerHTML = data);
+            .then(data => document.getElementById('navigation').innerHTML = data)
+            .catch(error => console.log('Navigation loading failed:', error));
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-content').innerHTML = data)
+            .catch(error => console.log('Footer loading failed:', error));
     </script>
 <script src="js/responsive-nav.js"></script>
 </body>
