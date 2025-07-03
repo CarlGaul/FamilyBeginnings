@@ -732,15 +732,8 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Family Beginnings. All rights reserved.</p>
-            <p class="footer-disclaimer">
-                This website provides general information only and does not constitute legal advice. 
-                An attorney-client relationship is not formed until a retainer agreement is signed.
-            </p>
-        </div>
-    </footer>
+   <!-- FOOTER PLACEHOLDER -->
+    <div id="footer"></div>
 
     <script>
         // ===== SMOOTH SCROLLING FOR NAVIGATION =====
@@ -806,6 +799,12 @@
         fetch('nav.html')
             .then(response => response.text())
             .then(data => document.getElementById('navigation').innerHTML = data);
+   
+    // Load footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(error => console.log('Footer loading failed:', error));
     </script>
     <script src="js/responsive-nav.js"></script>
 </body>
