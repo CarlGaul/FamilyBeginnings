@@ -551,8 +551,15 @@
         </div>
     </main>
 
-    <!-- FOOTER PLACEHOLDER -->
-    <div id="footer"></div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Family Beginnings - Pregnancy Discrimination Lawyers. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                <strong>ATTORNEY ADVERTISING.</strong> This website is designed for general information only. The information presented at this site should not be construed as legal advice nor the formation of a lawyer/client relationship. Prior results do not guarantee a similar outcome.
+            </p>
+        </div>
+    </footer>
 
     <script>
         // Global variables
@@ -1012,16 +1019,11 @@ Note: Please keep a copy of this letter for your records and consider sending it
         // Initialize progress bar
         updateProgress();
 
-        // Load navigation and footer
+        // Load navigation
         fetch('nav.html')
             .then(response => response.text())
             .then(data => document.getElementById('navigation').innerHTML = data)
             .catch(error => console.log('Navigation loading failed:', error));
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data)
-            .catch(error => console.log('Footer loading failed:', error));
 
         // Google Analytics tracking
         document.addEventListener('DOMContentLoaded', function() {
