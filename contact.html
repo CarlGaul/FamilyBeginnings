@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimized Meta Tags -->
-    <title>Contact Family Beginnings - Free Pregnancy Discrimination Consultation</title>
-    <meta name="description" content="Schedule a free consultation with our pregnancy discrimination lawyers. Contact Family Beginnings for legal representation and workplace rights protection.">
-    <meta name="keywords" content="free pregnancy discrimination consultation, contact pregnancy lawyer, schedule legal consultation, pregnancy rights attorney, maternity leave lawyer contact">
+    <title>Contact Family Beginnings - Educational Resources and Pro Bono Attorney Referrals</title>
+    <meta name="description" content="Request educational resources or pro bono attorney referrals. Contact Family Beginnings for workplace rights information and attorney referral services.">
+    <meta name="keywords" content="attorney referrals, educational resources, workplace rights information, pro bono legal help, family support">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://carlgaul.github.io/FamilyBeginnings/contact.html">
@@ -277,6 +277,49 @@
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
 
+        /* ===== REFERRAL GRID ===== */
+        .referral-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .referral-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #e74c3c;
+        }
+
+        .referral-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .referral-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .referral-link {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .referral-link:hover {
+            background: #c0392b;
+        }
+
         /* ===== CTA SECTION ===== */
         .cta-section {
             background: #f8f9fa;
@@ -391,8 +434,8 @@
         <!-- PAGE HERO -->
         <section class="page-hero">
             <div class="container">
-                <h1>Contact Our Pregnancy Discrimination Lawyers</h1>
-                <p>Schedule your free consultation to protect your workplace rights and family's future</p>
+                <h1>Contact Family Beginnings</h1>
+                <p>Request educational resources or pro bono attorney referrals for workplace rights</p>
             </div>
         </section>
 
@@ -432,7 +475,7 @@
 
                     <!-- CONTACT FORM -->
                     <div class="contact-form">
-                        <h2>Request Free Consultation</h2>
+                        <h2>Request Information or Referral</h2>
                         <form id="contactForm" action="https://formspree.io/f/xpwrbnzn" method="POST">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -456,7 +499,7 @@
                                     <option value="pregnancy-discrimination">Pregnancy Discrimination</option>
                                     <option value="workplace-accommodation">Workplace Accommodation</option>
                                     <option value="parental-leave">Parental Leave Rights</option>
-                                    <option value="other">Other Legal Issue</option>
+                                    <option value="other">Other Issue</option>
                                 </select>
                             </div>
                             
@@ -466,7 +509,7 @@
                             </div>
                             
                             <!-- Security and Anti-Spam Hidden Fields -->
-                            <input type="hidden" name="_subject" value="New Legal Consultation Request - Family Beginnings">
+                            <input type="hidden" name="_subject" value="New Information Request - Family Beginnings">
                             <input type="hidden" name="_next" value="https://carlgaul.github.io/FamilyBeginnings/contact.html?success=true">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="text" name="_gotcha" style="display:none !important">
@@ -477,15 +520,55 @@
                                 <span id="charCount">0</span>/2000 characters
                             </div>
                             
-                            <button type="submit" class="submit-btn" id="submitBtn">Send Secure Message</button>
+                            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
                             <div id="formMessage" style="margin-top: 1rem; font-weight: bold;"></div>
                         </form>
                         
-                        <!-- Legal and Security Notice -->
+                        <!-- Security Notice -->
                         <div style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; font-size: 0.9rem; color: #666;">
                             🔒 <strong>Secure Submission:</strong> This form uses SSL encryption to protect your information.<br><br>
-                            ⚖️ <strong>Legal Notice:</strong> Submitting this form or contacting Family Beginnings does not create an attorney-client relationship. An attorney-client relationship is established only after both parties agree to representation through a signed retainer agreement. Do not include confidential or sensitive information in this initial contact form.
+                            📝 <strong>Note:</strong> We cannot respond to questions requiring legal advice but can direct you to pro bono referral services.
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRO BONO ATTORNEY REFERRALS SECTION -->
+        <section class="section-alt">
+            <div class="container">
+                <h2>Pro Bono Attorney Referrals</h2>
+                <p>If you need legal assistance for workplace issues related to parenting or caregiving, we can connect you with pro bono attorney referral services.</p>
+                
+                <div class="referral-grid">
+                    <div class="referral-card">
+                        <h3>New York City Bar Association</h3>
+                        <p>Lawyer Referral Service providing pro bono and reduced-fee legal assistance for employment and discrimination cases.</p>
+                        <a href="https://www.nycbar.org/get-legal-help/" target="_blank" class="referral-link">Visit Website</a>
+                    </div>
+                    
+                    <div class="referral-card">
+                        <h3>National Employment Lawyers Association - New York</h3>
+                        <p>Network of employment law attorneys specializing in workplace discrimination and family rights cases.</p>
+                        <a href="https://www.nela.org/" target="_blank" class="referral-link">Visit Website</a>
+                    </div>
+                    
+                    <div class="referral-card">
+                        <h3>New York State Bar Association</h3>
+                        <p>Pro bono legal services and attorney referrals for employment and discrimination matters.</p>
+                        <a href="https://www.nysba.org/public-resources/" target="_blank" class="referral-link">Visit Website</a>
+                    </div>
+                    
+                    <div class="referral-card">
+                        <h3>NYC Commission on Human Rights</h3>
+                        <p>Free legal services and advocacy for discrimination cases, including pregnancy and family status discrimination.</p>
+                        <a href="https://www1.nyc.gov/site/cchr/about/legal-assistance.page" target="_blank" class="referral-link">Visit Website</a>
+                    </div>
+                    
+                    <div class="referral-card">
+                        <h3>Equal Employment Opportunity Commission</h3>
+                        <p>Federal agency providing free assistance with employment discrimination complaints and investigations.</p>
+                        <a href="https://www.eeoc.gov/employees" target="_blank" class="referral-link">Visit Website</a>
                     </div>
                 </div>
             </div>
@@ -494,10 +577,10 @@
         <!-- CTA SECTION -->
         <section class="cta-section">
             <div class="container">
-                <h2>Free Initial Consultation</h2>
-                <p>Don't let workplace discrimination affect your growing family. Contact us today for a confidential consultation about your rights and options.</p>
+                <h2>Get the Support You Need</h2>
+                <p>Whether you need educational resources or legal assistance, we're here to help you navigate workplace rights and protections.</p>
                 <div class="highlight-box">
-                    All consultations are completely confidential
+                    All inquiries are completely confidential
                 </div>
             </div>
         </section>
